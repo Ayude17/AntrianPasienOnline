@@ -262,27 +262,26 @@
                 </LinearLayout>
 
                 <Button
+                    android:id="@+id/btn_daftar"
+                    style="@android:style/Widget.Button"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
-                    android:background="#fff"
-                    android:textColor="#000"
-                    android:id="@+id/registerButton"
-                    android:text="DAFTAR"
-                    android:layout_marginTop="25dp"/>
+                    android:layout_height="40dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/capsule"
+                    android:backgroundTint="#4169E1"
+                    android:hint="DAFTAR"
+                    android:textColorHint="#FFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
             </LinearLayout>
-
-
         </ScrollView>
-
     </LinearLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:id="@+id/footer"
-        android:background="#6495ED"
+        android:background="#4169E1"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true">
 

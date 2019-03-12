@@ -32,7 +32,7 @@
                     android:id="@+id/edt_tgl"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:hint="dd_mm_yyyy"
+                    android:hint="dd-mm-yyyy"
                     android:inputType="date"
                     />
                 <Button
@@ -42,20 +42,20 @@
                     android:background="@drawable/capsule"
                     android:backgroundTint="#4169E1"
                     android:textColor="#fff"
-                    android:text="pilih_tangal"
+                    android:text="pilih tangal"
                     android:textSize="14sp"/>
                 <EditText
                     android:id="@+id/edt_jam"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:hint="hh_mm"
+                    android:hint="hh:mm"
                     android:inputType="time"
                     />
                 <Button
                     android:id="@+id/btn_jam"
                     android:layout_width="100dp"
                     android:layout_height="27dp"
-                    android:text="pilih_jam"
+                    android:text="pilih jam"
                     android:background="@drawable/capsule"
                     android:backgroundTint="#4169E1"
                     android:textColor="#fff"

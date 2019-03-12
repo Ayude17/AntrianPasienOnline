@@ -32,15 +32,12 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginBottom="0dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginStart="20dp"
+                android:layout_marginBottom="10dp"
                 android:layout_marginTop="0dp"
                 android:text="Isikan Data Dibawah Untuk Mendaftar!"
                 android:textColor="#fff"
-                android:textSize="15sp" />
+                android:textStyle="italic"
+                android:textSize="17sp" />
 
         </LinearLayout>
         <ScrollView
@@ -53,11 +50,41 @@
                 android:orientation="vertical">
 
                 <LinearLayout
+                    android:id="@+id/nama"
                     android:layout_width="match_parent"
-                    android:id="@+id/noRM"
                     android:layout_height="55dp">
                     <ImageView
-                        android:id="@+id/image1"
+                        android:id="@+id/image4"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/ic_person_name"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="5dp"/>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/edtNama"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColorHint="#fff"
+                            android:textColor="#fff"
+                            android:inputType="number"
+                            android:hint="Nama"
+                            android:layout_toRightOf="@+id/image4"/>
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tglLhr"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp">
+                    <ImageView
+                        android:id="@+id/image7"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:scaleType="fitCenter"
@@ -66,18 +93,19 @@
                         android:layout_alignParentLeft="true"
                         android:layout_gravity="center"
                         android:layout_marginRight="5dp"/>
+
                     <android.support.design.widget.TextInputLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
                         <android.support.design.widget.TextInputEditText
-                            android:id="@+id/edtNoRM"
+                            android:id="@+id/edtTglLhr"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textColorHint="#fff"
                             android:textColor="#fff"
                             android:inputType="number"
-                            android:hint="Nomor Rekam Medis"
-                            android:layout_toRightOf="@+id/image1"/>
+                            android:hint="Tanggal Lahir"
+                            android:layout_toRightOf="@+id/image7"/>
                     </android.support.design.widget.TextInputLayout>
                 </LinearLayout>
 
@@ -107,6 +135,35 @@
                             android:hint="NIK (Nomor Induk Kependudukan)"
                             android:id="@+id/teleponView"
                             android:layout_toRightOf="@+id/image2"/>
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/noRM"
+                    android:layout_height="55dp">
+                    <ImageView
+                        android:id="@+id/image1"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/ic_email"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="5dp"/>
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/edtNoRM"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColorHint="#fff"
+                            android:textColor="#fff"
+                            android:inputType="number"
+                            android:hint="Nomor Rekam Medis"
+                            android:layout_toRightOf="@+id/image1"/>
                     </android.support.design.widget.TextInputLayout>
                 </LinearLayout>
 
@@ -142,66 +199,6 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/nama"
-                    android:layout_width="match_parent"
-                    android:layout_height="55dp">
-                    <ImageView
-                        android:id="@+id/image4"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:scaleType="fitCenter"
-                        app:srcCompat="@drawable/ic_person_name"
-                        android:layout_centerVertical="true"
-                        android:layout_alignParentLeft="true"
-                        android:layout_gravity="center"
-                        android:layout_marginRight="5dp"/>
-
-                    <android.support.design.widget.TextInputLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                        <android.support.design.widget.TextInputEditText
-                            android:id="@+id/edtNama"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textColorHint="#fff"
-                            android:textColor="#fff"
-                            android:inputType="number"
-                            android:hint="Nama"
-                            android:layout_toRightOf="@+id/image4"/>
-                    </android.support.design.widget.TextInputLayout>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/password"
-                    android:layout_width="match_parent"
-                    android:layout_height="55dp">
-                    <ImageView
-                        android:id="@+id/image5"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:scaleType="fitCenter"
-                        app:srcCompat="@drawable/ic_secret"
-                        android:layout_centerVertical="true"
-                        android:layout_alignParentLeft="true"
-                        android:layout_gravity="center"
-                        android:layout_marginRight="5dp"/>
-
-                    <android.support.design.widget.TextInputLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                        <android.support.design.widget.TextInputEditText
-                            android:id="@+id/edtPswd"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textColorHint="#fff"
-                            android:textColor="#fff"
-                            android:inputType="number"
-                            android:hint="Password"
-                            android:layout_toRightOf="@+id/image4"/>
-                    </android.support.design.widget.TextInputLayout>
-                </LinearLayout>
-
-                <LinearLayout
                     android:id="@+id/alamat"
                     android:layout_width="match_parent"
                     android:layout_height="55dp">
@@ -230,17 +227,16 @@
                             android:layout_toRightOf="@+id/image6"/>
                     </android.support.design.widget.TextInputLayout>
                 </LinearLayout>
-
                 <LinearLayout
-                    android:id="@+id/tglLhr"
+                    android:id="@+id/noHp"
                     android:layout_width="match_parent"
                     android:layout_height="55dp">
                     <ImageView
-                        android:id="@+id/image7"
+                        android:id="@+id/image8"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:scaleType="fitCenter"
-                        app:srcCompat="@drawable/ic_email"
+                        app:srcCompat="@drawable/ic_phone"
                         android:layout_centerVertical="true"
                         android:layout_alignParentLeft="true"
                         android:layout_gravity="center"
@@ -250,14 +246,45 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
                         <android.support.design.widget.TextInputEditText
-                            android:id="@+id/edtTglLhr"
+                            android:id="@+id/edtNoHp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textColorHint="#fff"
                             android:textColor="#fff"
                             android:inputType="number"
-                            android:hint="Tanggal Lahir"
-                            android:layout_toRightOf="@+id/image7"/>
+                            android:hint="Nomor Handphone"
+                            android:layout_toRightOf="@+id/image6"/>
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp">
+                    <ImageView
+                        android:id="@+id/image5"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/ic_secret"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="5dp"/>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/edtPswd"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColorHint="#fff"
+                            android:textColor="#fff"
+                            android:inputType="number"
+                            android:hint="Password"
+                            android:layout_toRightOf="@+id/image4"/>
                     </android.support.design.widget.TextInputLayout>
                 </LinearLayout>
 
@@ -291,26 +318,25 @@
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true">
             <TextView
+                android:id="@+id/textView9"
                 android:text="Sudah punya akun?"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:textColor="#F0F8FF"
-                android:layout_alignParentLeft="true"
-                android:id="@+id/textView9" />
+                android:textStyle="italic"
+                android:layout_alignParentLeft="true" />
 
-            <TextView
-                android:text="MASUK"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/loginView"
-                android:textColor="#fff"
-                android:textStyle="bold"
-                android:layout_alignBaseline="@+id/textView9"
-                android:layout_alignBottom="@+id/textView9"
+            <Button
+                android:id="@+id/btn_masuk"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:hint="MASUK"
+                android:textColorHint="#FFF"
+                android:textSize="16sp"
                 android:layout_toRightOf="@+id/textView9"
-                android:layout_marginLeft="5dp" />
-
+                android:textStyle="bold"/>
         </RelativeLayout>
     </RelativeLayout>
     <ProgressBar
@@ -319,5 +345,5 @@
         android:visibility="gone"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:id="@+id/progressBar" />
+        android:id="@+id/progressBar"/>
 </RelativeLayout>

@@ -32,9 +32,9 @@
             <ImageView
                 android:id="@+id/logo"
                 android:layout_width="140dp"
-                android:layout_height="100dp"
+                android:layout_height="150dp"
                 android:layout_gravity="center"
-                android:background="@drawable/ic_launcher_foreground"/>
+                android:background="@drawable/hosp_logo2"/>
             <TextView
                 android:id="@+id/textView1"
                 android:layout_width="wrap_content"
@@ -49,7 +49,7 @@
 
             <!--&lt;!&ndash;editText ini unt.tampilan edit text login biasa&ndash;&gt;-->
             <EditText
-                android:id="@+id/edt_uname"
+                android:id="@+id/edt_nik"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/capsule"

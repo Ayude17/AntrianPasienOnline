@@ -13,8 +13,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DaftarAntrianActivity"></activity>
-        <activity android:name=".MainActivity"/>
+        <activity android:name=".PilihDokterActivity"></activity>
+        <activity android:name=".PilihPoliActivity" />
+        <activity android:name=".PilihTanggalActivity" />
+        <activity android:name=".DaftarAntrianActivity" />
+        <activity android:name=".MainActivity" />
         <activity android:name=".DaftarActivity" />
         <activity android:name=".MenuActivity" />
         <activity android:name=".LoginActivity" />

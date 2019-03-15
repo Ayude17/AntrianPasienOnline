@@ -31,9 +31,9 @@
             <ImageView
                 android:id="@+id/logo"
                 android:layout_width="140dp"
-                android:layout_height="150dp"
+                android:layout_height="155dp"
                 android:layout_gravity="center"
-                android:background="@drawable/hosp_logo2"/>
+                android:background="@drawable/pusk_logo"/>
             <TextView
                 android:id="@+id/textView1"
                 android:layout_width="wrap_content"
@@ -55,7 +55,7 @@
                 android:backgroundTint="#fff"
                 android:textSize="16sp"
                 android:hint="Masukkan NIK"
-                android:inputType="text"
+                android:inputType="numberDecimal"
                 android:layout_marginBottom="10dp"
                 android:paddingLeft="20dp"/>
 
@@ -104,7 +104,6 @@
                 android:layout_height="40dp"
                 android:hint="DAFTAR"
                 android:textColorHint="#4169E1"
-                android:textSize="16sp"
                 android:textStyle="bold" />
         </LinearLayout>
     </ScrollView>

@@ -16,14 +16,13 @@
         <activity android:name=".PilihDokterActivity"></activity>
         <activity android:name=".PilihPoliActivity" />
         <activity android:name=".PilihTanggalActivity" />
-        <activity android:name=".DaftarAntrianActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".DaftarActivity" />
         <activity android:name=".MenuActivity" />
         <activity android:name=".LoginActivity" />
         <activity
-            android:name=".SplashScreenActivity"
-            android:theme="@style/AppThemeNoactionbar">
+            android:name=".SplashScreenActivity">
+            <!--android:theme="@style/AppThemeNoactionbar">-->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

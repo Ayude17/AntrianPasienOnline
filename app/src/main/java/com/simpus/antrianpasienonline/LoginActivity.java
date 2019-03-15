@@ -42,7 +42,7 @@ public class LoginActivity extends AppCompatActivity {
         btnRegis = (Button) findViewById(R.id.btn_regis);
 
         sharedPreferences = getSharedPreferences("DATA", Context.MODE_PRIVATE);
-
+//button LOGIN
         btnLogin.setOnClickListener(new View.OnClickListener() {
             //mengaktifkan button untuk login
             @Override
@@ -57,7 +57,7 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
-
+// button DAFTAR
         btnRegis.setOnClickListener(new View.OnClickListener() {
             //onClick untuk button Daftar
             @Override
@@ -105,7 +105,7 @@ public class LoginActivity extends AppCompatActivity {
 
                                 //menampilkan pesan berhasil
                                 Toast.makeText(LoginActivity.this,object.getString("message"),Toast.LENGTH_LONG).show();
-                                Intent intent = new Intent(LoginActivity.this,MainActivity.class);
+                                Intent intent = new Intent(LoginActivity.this,MenuActivity.class);
                                 startActivity(intent);
                                 progressDialog.dismiss();
                                 finish();
@@ -125,7 +125,7 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onErrorResponse(VolleyError error){
                         Log.d("CREATE", error.toString());
-                        Toast.makeText(LoginActivity.this,"Sedang Mengambil Data, Pastikan Perangkat Sudah Tersambung Internet",Toast.LENGTH_LONG).show();
+                        Toast.makeText(LoginActivity.this,"Error, Login Gagal <!>",Toast.LENGTH_LONG).show();
                         progressDialog.dismiss();
                     }
                 }){
@@ -145,7 +145,7 @@ public class LoginActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        //fungsi untuk tombol keluar aplikasi
+        // tombol keluar aplikasi
         if (doubleBackToExitPressedOnce) {
             super.onBackPressed();
             return;

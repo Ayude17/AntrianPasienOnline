@@ -12,8 +12,7 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="0dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="10dp"
         android:id="@+id/formLogin"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp">
@@ -27,7 +26,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"
-                android:text="Silakan Isi Formulir Dibawah Untuk Mendaftarkan Data Pengguna!"
+                android:text="Silakan Isi Formulir di Bawah Untuk Mendaftarkan Data Pengguna!"
                 android:textColor="#fff"
                 android:textStyle="italic"
                 android:textSize="17sp" />
@@ -44,7 +43,8 @@
                 <LinearLayout
                     android:id="@+id/nama"
                     android:layout_width="match_parent"
-                    android:layout_height="55dp">
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="5dp">
                     <ImageView
                         android:id="@+id/image4"
                         android:layout_width="25dp"
@@ -63,15 +63,18 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="textPersonName"
-                            android:hint="Nama"
+                            android:hint="Nama Lengkap"
+                            android:textColorHint="#4169E1"
                             android:layout_toRightOf="@+id/image4"/>
                     </android.support.design.widget.TextInputLayout>
+
                 </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/jk"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="5dp"
                     android:orientation="vertical">
                     <TextView
                         android:id="@+id/tv_jk"
@@ -84,7 +87,7 @@
                         android:id="@+id/jk2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                       >
+                        android:layout_marginBottom="5dp">
                         <RadioGroup
                             android:id="@+id/gender"
                             android:layout_width="match_parent"
@@ -96,23 +99,22 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Laki-Laki"
-                                android:checked="true"
                                 />
                             <RadioButton
                                 android:id="@+id/rad_pr"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Perempuan"
-                                android:checked="false"
                                 />
                         </RadioGroup>
                     </LinearLayout>
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/tglLhr"
+                    android:id="@+id/tgl_lhr"
                     android:layout_width="match_parent"
-                    android:layout_height="55dp">
+                    android:layout_height="50dp"
+                    android:orientation="horizontal">
                     <ImageView
                         android:id="@+id/image7"
                         android:layout_width="25dp"
@@ -126,7 +128,7 @@
                     <EditText
                         android:id="@+id/edt_tglLahir"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:hint="Tanggal Lahir"
                         android:inputType="date"
                         />
@@ -135,16 +137,17 @@
                         android:layout_width="100dp"
                         android:layout_height="27dp"
                         android:background="@drawable/capsule"
-                        android:backgroundTint="#fff"
-                        android:textColor="#000"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:textColor="#fff"
                         android:text="pilih"
                         android:textSize="14sp"/>
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/nik"
                     android:layout_width="match_parent"
-                    android:id="@+id/NIK"
-                    android:layout_height="55dp">
+                    android:layout_height="50dp"
+                    android:orientation="horizontal">
                     <ImageView
                         android:id="@+id/image2"
                         android:layout_width="25dp"
@@ -171,7 +174,8 @@
                 <LinearLayout
                     android:id="@+id/noRM"
                     android:layout_width="match_parent"
-                    android:layout_height="55dp">
+                    android:layout_height="55dp"
+                    android:layout_marginBottom="5dp">
 
                     <ImageView
                         android:id="@+id/image1"
@@ -199,7 +203,8 @@
                 <LinearLayout
                     android:id="@+id/noJaminan"
                     android:layout_width="match_parent"
-                    android:layout_height="55dp">
+                    android:layout_height="55dp"
+                    android:layout_marginBottom="5dp">
                     <ImageView
                         android:id="@+id/image3"
                         android:layout_width="25dp"
@@ -226,7 +231,8 @@
                 <LinearLayout
                     android:id="@+id/alamat"
                     android:layout_width="match_parent"
-                    android:layout_height="55dp">
+                    android:layout_height="50dp"
+                    android:orientation="horizontal">
                     <ImageView
                         android:id="@+id/image6"
                         android:layout_width="25dp"
@@ -314,13 +320,12 @@
                     android:background="@drawable/capsule"
                     android:backgroundTint="#fff"
                     android:hint="DAFTAR"
-                    android:textColorHint="#4169E1"
+                    android:textColorHint="@color/colorPrimary"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     android:textAlignment="center"
-                    android:layout_marginBottom="25dp"
+                    android:layout_marginBottom="30dp"
                     android:layout_gravity="center"/>
-
             </LinearLayout>
         </ScrollView>
     </LinearLayout>
@@ -329,7 +334,7 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:id="@+id/footer"
-        android:background="#4169E1"
+        android:background="@color/colorPrimary"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true">
 

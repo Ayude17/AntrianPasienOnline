@@ -33,7 +33,7 @@
                 android:layout_width="140dp"
                 android:layout_height="155dp"
                 android:layout_gravity="center"
-                android:background="@drawable/pusk_logo"/>
+                android:background="@drawable/hosp_logo2"/>
             <TextView
                 android:id="@+id/textView1"
                 android:layout_width="wrap_content"
@@ -85,7 +85,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/capsule"
-                android:backgroundTint="#4169E1"
+                android:backgroundTint="@color/colorPrimary"
                 android:hint="MASUK"
                 android:textColorHint="#FFFF"
                 android:textSize="16sp"
@@ -103,7 +103,7 @@
                 android:layout_width="100dp"
                 android:layout_height="40dp"
                 android:hint="DAFTAR"
-                android:textColorHint="#4169E1"
+                android:textColorHint="@color/colorPrimary"
                 android:textStyle="bold" />
         </LinearLayout>
     </ScrollView>

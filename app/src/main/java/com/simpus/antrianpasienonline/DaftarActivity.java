@@ -80,26 +80,6 @@ public class DaftarActivity extends AppCompatActivity implements View.OnClickLis
 //                    finish();
 //                }
 //            });
-//
-//            btnTglLhr.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
-//                // Get Current Date
-//                    final Calendar c = Calendar.getInstance();
-//                    mYear = c.get(Calendar.YEAR);
-//                    mMonth = c.get(Calendar.MONTH);
-//                    mDay = c.get(Calendar.DAY_OF_MONTH);
-//
-//                    DatePickerDialog datePickerDialog = new DatePickerDialog(this,
-//                            new DatePickerDialog.OnDateSetListener() {
-//                                @Override
-//                                public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-//                                    edtTglLhr.setText(dayOfMonth + " - " + (month + 1) + " - " + year);
-//                                }
-//                            }, mYear, mMonth, mDay);
-//                    datePickerDialog.show();
-//                }
-//            });
         }
 
         @Override
@@ -149,24 +129,24 @@ public class DaftarActivity extends AppCompatActivity implements View.OnClickLis
                         }, mYear,mMonth,mDay);
                 datePickerDialog.show();
             }
-    //        if (v == radLK) {
-    ////       button untuk membatalkan eksekusi
-    //            btnMasuk.setOnClickListener(new View.OnClickListener() {
-    //                @Override
-    //                public void onClick(View v) {
-    //
-    //                }
-    //            });
-    //        }
-    //        if (v == radPR) {
-    ////       button untuk membatalkan eksekusi
-    //            btnMasuk.setOnClickListener(new View.OnClickListener() {
-    //                @Override
-    //                public void onClick(View v) {
-    //
-    //                }
-    //            });
-    //        }
+            if (v == radLK) {
+    //       button untuk membatalkan eksekusi
+                btnMasuk.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                    }
+                });
+            }
+            if (v == radPR) {
+    //       button untuk membatalkan eksekusi
+                btnMasuk.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                    }
+                });
+            }
         }
 
     public void postRegister(){
@@ -224,8 +204,8 @@ public class DaftarActivity extends AppCompatActivity implements View.OnClickLis
                 params.put("jk", jk);
                 params.put("tgl_lahir", edtTglLhr.getText().toString());
                 params.put("nik", edtNIK.getText().toString());
-                params.put("no_rm", edtNama.getText().toString());
-                params.put("no_jaminan", edtNoRM.getText().toString());
+                params.put("no_rm", edtNoRM.getText().toString());
+                params.put("no_jaminan", edtNoJaminan.getText().toString());
                 params.put("alamat", edtAlamat.getText().toString());
                 params.put("no_hp", edtNoHP.getText().toString());
                 params.put("password", edtPswd.getText().toString());
@@ -319,6 +299,5 @@ public class DaftarActivity extends AppCompatActivity implements View.OnClickLis
             }
         }, 2000);
     }
-
 }
 

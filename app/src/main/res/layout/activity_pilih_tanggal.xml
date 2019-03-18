@@ -59,7 +59,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/capsule"
-                android:backgroundTint="#4169E1"
+                android:backgroundTint="@color/colorPrimary"
                 android:hint="LANJUTKAN"
                 android:textColorHint="#FFFF"
                 android:textSize="16sp"

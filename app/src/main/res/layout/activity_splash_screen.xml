@@ -13,16 +13,24 @@
         android:layout_height="200dp"
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
-        app:srcCompat="@drawable/pusk_logo" />
+        app:srcCompat="@drawable/hosp_logo2" />
 
     <TextView
+        android:id="@+id/tvSplashScreen"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="ANTRIAN PASIEN ONLINE"
         android:layout_below="@+id/imageView"
         android:gravity="center"
         android:textColor="#fff"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="100dp"
         android:textStyle="bold"/>
-
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="nama_rumah_sakit"
+        android:layout_below="@+id/tvSplashScreen"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"/>
 </RelativeLayout>

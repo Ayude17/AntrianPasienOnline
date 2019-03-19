@@ -45,7 +45,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="NAMA_POLI"
-            android:textSize="18sp"
+            android:textSize="20sp"
             android:textStyle="bold"
             android:textColor="#fff"/>
         <TextView
@@ -55,7 +55,7 @@
             android:layout_gravity="center"
             android:layout_marginBottom="10dp"
             android:text="NAMA_DOKTER"
-            android:textSize="18sp"
+            android:textSize="20sp"
             android:textStyle="bold"
             android:textColor="#fff"/>
         <TextView

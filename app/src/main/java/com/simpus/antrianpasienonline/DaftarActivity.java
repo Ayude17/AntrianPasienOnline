@@ -124,7 +124,19 @@ public class DaftarActivity extends AppCompatActivity implements View.OnClickLis
                         new DatePickerDialog.OnDateSetListener() {
                             @Override
                             public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                                edtTglLhr.setText(year + " - " + (month + 1) + " - " +dayOfMonth );
+                                month = month + 1;
+                                String formattedMonth = "" + month;
+                                String formattedDayOfMonth = "" + dayOfMonth;
+                                if(month < 10){
+
+                                    formattedMonth = "0" + month;
+                                }
+                                if(dayOfMonth < 10){
+
+                                    formattedDayOfMonth = "0" + dayOfMonth;
+                                }
+
+                                edtTglLhr.setText(year + "-" + formattedMonth+ "-" +formattedDayOfMonth );
                             }
                         }, mYear,mMonth,mDay);
                 datePickerDialog.show();
@@ -134,7 +146,7 @@ public class DaftarActivity extends AppCompatActivity implements View.OnClickLis
                 btnMasuk.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-
+                    jk = "1";
                     }
                 });
             }
@@ -143,7 +155,7 @@ public class DaftarActivity extends AppCompatActivity implements View.OnClickLis
                 btnMasuk.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-
+                        jk = "2";
                     }
                 });
             }
@@ -155,7 +167,7 @@ public class DaftarActivity extends AppCompatActivity implements View.OnClickLis
         progressDialog.setMessage("Loading...");
         progressDialog.show();
         StringRequest stringRequest = new StringRequest(Request.Method.POST,
-                "http://apitest.kinaryatama.id/antrian.android/daftar.php",
+                "http://apitest.kinaryatama.id/sms/andro_daftar.php",
                 //mengisi data petugas
                 new Response.Listener<String>(){
                     @Override
@@ -210,7 +222,15 @@ public class DaftarActivity extends AppCompatActivity implements View.OnClickLis
                 params.put("no_hp", edtNoHP.getText().toString());
                 params.put("password", edtPswd.getText().toString());
 //                <string,string> <string di php, String di atas>
-
+                Log.d("nama",edtNama.getText().toString());
+                Log.d("jk",jk);
+                Log.d("tgl_lahir",tgl_lahir);
+                Log.d("nik",nik);
+                Log.d("no_rm",edtNoRM.getText().toString());
+                Log.d("no_jaminan",edtNoJaminan.getText().toString());
+                Log.d("alamat",edtAlamat.getText().toString());
+                Log.d("no_hp",edtNoHP.getText().toString());
+                Log.d("password", edtPswd.getText().toString());
                 return params;
             }
         };
@@ -278,6 +298,7 @@ public class DaftarActivity extends AppCompatActivity implements View.OnClickLis
 //        if(check_nama && check_jk && check_tglLahir && check_nik && check_noRM && check_NoJaminan && check_alamat && check_noHP && check_password){
 //            AppController.getInstance().addToRequestQueue(stringRequest);
 //        }
+        AppController.getInstance().addToRequestQueue(stringRequest);
     }
 
     @Override

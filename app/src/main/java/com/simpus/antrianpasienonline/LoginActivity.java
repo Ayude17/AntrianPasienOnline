@@ -75,7 +75,7 @@ public class LoginActivity extends AppCompatActivity {
         progressDialog.setMessage("Loading...");
         progressDialog.show();
         StringRequest stringRequest = new StringRequest(Request.Method.POST, //request post
-                "http://apitest.kinaryatama.id/antrian.android/loginpasien.php",
+                "http://apitest.kinaryatama.id/sms/andro_loginpasien.php",
                 new Response.Listener<String>(){
                     @Override
                     public void onResponse(String response){

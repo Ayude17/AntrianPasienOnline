@@ -25,25 +25,14 @@
             android:gravity="center"
             android:padding="10dp"
             android:orientation="vertical">
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <android.support.design.widget.TextInputEditText
-                    android:id="@+id/edt_nama"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
-                    android:hint="Isikan Nomor Rujukan"
-                    android:textColorHint="#4169E1"
-                    android:layout_toRightOf="@+id/image4"/>
-            </android.support.design.widget.TextInputLayout>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Silahkan Pilih Tanggal Periksa!"
-                android:textSize="18dp"
+                android:textSize="16dp"
                 android:textStyle="bold"
-                android:textColor="#fff"
+                android:textColor="@color/colorPrimary"
                 tools:ignore="SpUsage" />
 
             <CalendarView
@@ -55,12 +44,28 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="yyyy-mm-dd"
-                android:textColorHint="#fff"
-                android:textSize="18dp"
+                android:hint="tampil_tanggal_terpilih"
+
                 android:textStyle="bold"
                 android:textColor="#fff"
+                tools:ignore="SpUsage"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Silahkan Isi Nomor Rujukan!"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"
                 tools:ignore="SpUsage" />
+            <EditText
+                android:id="@+id/edt_nama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textWebEditText"
+                android:hint="Isikan Nomor Rujukan"
+                android:layout_toRightOf="@+id/image4"/>
 
             <Button
                 android:id="@+id/btn_lanjut1"
@@ -73,8 +78,8 @@
                 android:background="@drawable/capsule"
                 android:backgroundTint="@color/colorPrimary"
                 android:hint="LANJUTKAN"
-                android:textColorHint="#FFFF"
-                android:textSize="16sp"
+                android:textColorHint="@color/colorWhite"
+                android:textSize="15sp"
                 android:textStyle="bold" />
         </LinearLayout>
 

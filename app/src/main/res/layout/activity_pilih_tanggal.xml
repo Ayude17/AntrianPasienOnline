@@ -30,9 +30,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Silahkan Pilih Tanggal Periksa!"
-                android:textSize="18dp"
+                android:textSize="16dp"
                 android:textStyle="bold"
-                android:textColor="#fff"
+                android:textColor="@color/colorPrimary"
                 tools:ignore="SpUsage" />
 
             <CalendarView
@@ -45,7 +45,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="tampil_tanggal_terpilih"
-                android:textSize="18dp"
+
                 android:textStyle="bold"
                 android:textColor="#fff"
                 tools:ignore="SpUsage"
@@ -55,15 +55,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Silahkan Isi Nomor Rujukan!"
-                android:textSize="18dp"
+                android:textSize="16dp"
                 android:textStyle="bold"
-                android:textColor="#fff"
+                android:textColor="@color/colorPrimary"
                 tools:ignore="SpUsage" />
             <EditText
                 android:id="@+id/edt_nama"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="text"
+                android:inputType="textWebEditText"
                 android:hint="Isikan Nomor Rujukan"
                 android:layout_toRightOf="@+id/image4"/>
 
@@ -78,8 +78,8 @@
                 android:background="@drawable/capsule"
                 android:backgroundTint="@color/colorPrimary"
                 android:hint="LANJUTKAN"
-                android:textColorHint="#FFFF"
-                android:textSize="16sp"
+                android:textColorHint="@color/colorWhite"
+                android:textSize="15sp"
                 android:textStyle="bold" />
         </LinearLayout>
 

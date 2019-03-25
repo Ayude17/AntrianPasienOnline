@@ -26,8 +26,9 @@
             android:layout_marginBottom="10sp"
             android:text="Detail Kartu Antrian Anda:"
             android:textColor="@color/colorPrimary"
-            android:textSize="18sp"
+            android:textSize="16sp"
             android:textStyle="bold" />
+
     </LinearLayout>
 
     <ScrollView
@@ -52,9 +53,9 @@
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="20dp"
-                    android:textSize="16sp"
                     android:text="Nomor Antrian :"
                     android:textColor="@color/colorWhite" />
+                <!--android:textSize="16sp"-->
 
                 <TextView
                     android:id="@+id/noAntrian"
@@ -64,7 +65,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="5dp"
                     android:text="no_antrian"
-                    android:textSize="40sp"
+                    android:textSize="30sp"
                     android:textStyle="bold"
                     android:textColor="@color/colorWhite"/>
             </RelativeLayout>
@@ -97,7 +98,6 @@
                             android:layout_marginRight="15sp"
                             android:text="Nama Pasien:"
                             android:textColor="#fff"
-                            android:textSize="18sp"
                             android:textStyle="bold" />
                         <TextView
                             android:id="@+id/nmPasien"
@@ -106,7 +106,6 @@
                             android:layout_toRightOf="@+id/pasien"
                             android:text="nama_pasien"
                             android:textColor="#fff"
-                            android:textSize="18sp"
                             android:textStyle="bold" />
                     </LinearLayout>
 
@@ -123,7 +122,6 @@
                             android:layout_marginRight="15sp"
                             android:text="Nama Poli     :"
                             android:textColor="#fff"
-                            android:textSize="18sp"
                             android:textStyle="bold" />\
 
                         <TextView
@@ -133,7 +131,6 @@
                             android:layout_toRightOf="@+id/poli"
                             android:text="nama_poli"
                             android:textColor="#fff"
-                            android:textSize="18sp"
                             android:textStyle="bold" />
                     </LinearLayout>
 
@@ -150,7 +147,6 @@
                             android:layout_marginRight="15sp"
                             android:text="Nama Dokter:"
                             android:textColor="#fff"
-                            android:textSize="18sp"
                             android:textStyle="bold" />
 
                         <TextView
@@ -160,7 +156,6 @@
                             android:layout_toRightOf="@+id/dokter"
                             android:text="nama_dokter"
                             android:textColor="#fff"
-                            android:textSize="18sp"
                             android:textStyle="bold" />
                     </LinearLayout>
                 </LinearLayout>
@@ -182,7 +177,6 @@
                     android:layout_marginBottom="10dp"
                     android:text="Prakiraan Waktu Periksa: 07:30 WIB (Rata-rata waktu periksa tiap pasien adalah 30 menit)"
                     android:textColor="#fff"
-                    android:textSize="18sp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"/>
             </RelativeLayout>
@@ -246,7 +240,6 @@
                     android:layout_height="wrap_content"
                     android:text="*Harap datang maksimal 16 menit sebelum waktu prakiraan"
                     android:textColor="@color/colorPrimary"
-                    android:textSize="18sp"
                     android:textStyle="italic" />
 
                 <TextView
@@ -255,7 +248,6 @@
                     android:layout_height="wrap_content"
                     android:text="*Antrian akan dibatalkan apabila pada saat nomor anrian dipanggil tidak ada konfirmasi kahadiran"
                     android:textColor="@color/colorPrimary"
-                    android:textSize="18sp"
                     android:textStyle="italic" />
             </LinearLayout>
         </LinearLayout>

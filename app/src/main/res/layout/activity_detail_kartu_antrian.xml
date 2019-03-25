@@ -13,166 +13,211 @@
     android:background="#87CEFA"
     tools:context=".DetailKartuAntrianActivity">
 
+    <LinearLayout
+        android:id="@+id/llDetailAntrian"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp">
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10sp"
+            android:text="Detail Kartu Antrian Anda:"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_below="@+id/llDetailAntrian">
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:orientation="vertical">
-            <TextView
-                android:id="@+id/textView1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="20sp"
-                android:text="Detail Kartu Antrian Anda:"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:textColor="#fff"/>
-            <TextView
-                android:id="@+id/antrian"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Nomor Antrian:"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:layout_gravity="center"
-                android:textColor="#fff"/>
-            <TextView
-                android:id="@+id/noAntrian"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:layout_gravity="center"
-                android:text="nomor_antrian"
-                android:textStyle="bold"
-                android:textColor="#fff"
-                android:textSize="40dp"
-                />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-            <LinearLayout
+            android:orientation="vertical"
+            android:padding="10dp">
+            <RelativeLayout
+                android:id="@+id/nomorantrian"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:background="@color/colorPrimary"
+                android:elevation="4dp"
+                android:paddingBottom="24dp">
                 <TextView
-                    android:id="@+id/pasien"
+                    android:id="@+id/antrian"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Nama Pasien     :"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:layout_marginRight="15sp"
-                    android:textColor="#fff"
-                    android:layout_marginEnd="15sp" />
-                <TextView
-                    android:id="@+id/nmPasien"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="nama_pasien"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:textColor="#fff"
-                    android:layout_toRightOf="@+id/pasien" />
-            </LinearLayout>
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:textSize="16sp"
+                    android:text="Nomor Antrian :"
+                    android:textColor="@color/colorWhite" />
 
-            <LinearLayout
+                <TextView
+                    android:id="@+id/noAntrian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/antrian"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:text="no_antrian"
+                    android:textSize="40sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorWhite"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/namapasien"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:id="@+id/poli"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Nama Poli          :"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:layout_marginRight="15sp"
-                    android:textColor="#fff"
-                    android:layout_marginEnd="15sp" />\
+                android:background="@color/colorPrimary"
+                android:elevation="4dp"
+                android:paddingBottom="24dp"
+                android:layout_marginTop="10dp">
 
-                <TextView
-                    android:id="@+id/nmPoli"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="nama_poli"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:textColor="#fff"
-                    android:layout_toRightOf="@+id/poli" />
-            </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:layout_marginLeft="10dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="20sp">
+                        <TextView
+                            android:id="@+id/pasien"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="15sp"
+                            android:layout_marginRight="15sp"
+                            android:text="Nama Pasien:"
+                            android:textColor="#fff"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/nmPasien"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/pasien"
+                            android:text="nama_pasien"
+                            android:textColor="#fff"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
 
-            <LinearLayout
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/poli"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="15sp"
+                            android:layout_marginRight="15sp"
+                            android:text="Nama Poli     :"
+                            android:textColor="#fff"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />\
+
+                        <TextView
+                            android:id="@+id/nmPoli"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/poli"
+                            android:text="nama_poli"
+                            android:textColor="#fff"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/dokter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="15sp"
+                            android:layout_marginRight="15sp"
+                            android:text="Nama Dokter:"
+                            android:textColor="#fff"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/nmDokter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/dokter"
+                            android:text="nama_dokter"
+                            android:textColor="#fff"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/announce"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:background="@color/colorPrimary"
+                android:elevation="4dp"
+                android:paddingBottom="24dp"
+                android:layout_marginTop="10dp">
                 <TextView
-                    android:id="@+id/dokter"
+                    android:id="@+id/ket5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Nama Dokter     :"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:layout_marginRight="15sp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Prakiraan Waktu Periksa: 07:30 WIB (Rata-rata waktu periksa tiap pasien adalah 30 menit)"
                     android:textColor="#fff"
-                    android:layout_marginEnd="15sp" />
-                <TextView
-                    android:id="@+id/nmDokter"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="nama_dokter"
                     android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:textColor="#fff"
-                    android:layout_toRightOf="@+id/dokter" />
-            </LinearLayout>
-        </LinearLayout>
-
-            <TextView
-                android:id="@+id/ket5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:text="Prakiraan Waktu Periksa: 07:30 WIB (Rata-rata waktu periksa tiap pasien adalah 30 menit)"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:layout_gravity="center"
-                android:textColor="#fff"/>
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
+            </RelativeLayout>
 
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:orientation="horizontal">
+
                 <Button
                     android:id="@+id/btn_batal_antri"
                     style="@android:style/Widget.Button"
                     android:layout_width="120dp"
                     android:layout_height="40dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginRight="10dp"
-                    android:background="@drawable/capsule"
                     android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/capsule"
                     android:backgroundTint="#fff"
                     android:hint="Batal Antri"
                     android:textColorHint="@color/colorPrimary"
                     android:textSize="16sp"
                     android:textStyle="bold" />
+
                 <Button
                     android:id="@+id/btn_tanya_admin"
                     style="@android:style/Widget.Button"
                     android:layout_width="130dp"
                     android:layout_height="40dp"
+                    android:layout_gravity="center"
                     android:layout_marginTop="20dp"
                     android:layout_marginBottom="10dp"
                     android:background="@drawable/capsule"
-                    android:layout_gravity="center"
                     android:backgroundTint="@color/colorPrimary"
                     android:hint="Tanya Admin"
                     android:textColorHint="#FFFF"
@@ -184,23 +229,34 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_gravity="center">
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:id="@+id/warning"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PERHATIAN!"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
                 <TextView
                     android:id="@+id/ket3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="*Harap datang maksimal 16 menit sebelum waktu prakiraan"
+                    android:textColor="@color/colorPrimary"
                     android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:textColor="#fff"/>
+                    android:textStyle="italic" />
+
                 <TextView
                     android:id="@+id/ket4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="*Antrian akan dibatalkan apabila pada saat nomor anrian dipanggil tidak ada konfirmasi kahadiran"
+                    android:textColor="@color/colorPrimary"
                     android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:textColor="#fff"/>
+                    android:textStyle="italic" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

@@ -6,31 +6,31 @@
     android:background="#87CEFA"
     android:paddingBottom="3dp">
 
-    <View
-        android:id="@+id/dividerTop"
-        android:layout_width="match_parent"
-        android:layout_height="10dp"
-        android:background="#E4E6E3" />
+    <!--<View-->
+        <!--android:id="@+id/dividerTop"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="10dp"-->
+        <!--android:background="#E4E6E3" />-->
 
     <TextView
         android:id="@+id/poliView"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/capsule"
         android:backgroundTint="#fff"
-        android:text="POLI 1"
+        android:text="@string/app_name"
         android:textColorHint="@color/colorPrimary"
         android:textSize="22sp"
         android:textStyle="bold"
         android:gravity="center"/>
 
-    <View
-        android:id="@+id/divider"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:background="#ebebeb" />
+    <!--<View-->
+        <!--android:id="@+id/divider"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:layout_marginLeft="16dp"-->
+        <!--android:layout_marginRight="16dp"-->
+        <!--android:background="#ebebeb" />-->
 
 </RelativeLayout>

@@ -12,6 +12,6 @@ public class ListPoliViewHolder extends RecyclerView.ViewHolder {
 
     public ListPoliViewHolder(View itemView){
         super(itemView);
-        TextView poliView = (TextView)itemView.findViewById(R.id.poliView);
+        poliView = (TextView)itemView.findViewById(R.id.poliView);
     }
 }

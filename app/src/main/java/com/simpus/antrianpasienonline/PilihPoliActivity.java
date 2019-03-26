@@ -21,6 +21,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.HttpHeaderParser;
 import com.android.volley.toolbox.JsonArrayRequest;
+import com.android.volley.toolbox.StringRequest;
 import com.simpus.antrianpasienonline.adapters.ListPoliAdapter;
 import com.simpus.antrianpasienonline.objects.poli;
 
@@ -67,20 +68,22 @@ public class PilihPoliActivity extends AppCompatActivity implements View.OnClick
         String url;
         url = "http://apitest.kinaryatama.id/sms/list_jadwal_poli.php";
 
-        JsonArrayRequest jsonObjReq = new JsonArrayRequest(Request.Method.POST,
-                url, new Response.Listener<JSONArray>() {
+        StringRequest stringRequest = new StringRequest(Request.Method.POST,
+                url,new Response.Listener<String>() {
             @Override
-            public void onResponse(JSONArray response) {
+            public void onResponse(String response) {
                 Log.d("DEBUGS", response.toString());
                 try {
+
                     data = new ArrayList<poli>();
-                    for (int i=0; i<response.length();i++){
-                        JSONObject object = response.getJSONObject(i);
-                        String id =object.getString("id");
+                    JSONArray arrayResponse = new JSONArray(response);
+                    for (int i=0; i<arrayResponse.length();i++){
+                        JSONObject object = arrayResponse.getJSONObject(i);
+                        String id_poli =object.getString("id_poli");
                         String poli = object.getString("poli");
 
 
-                        data.add(new poli (id,poli));
+                        data.add(new poli (id_poli,poli));
 
 
                         //menambah data ke recycleview
@@ -121,7 +124,7 @@ public class PilihPoliActivity extends AppCompatActivity implements View.OnClick
         };
 
 // Adding request to request queue
-        AppController.getInstance().addToRequestQueue(jsonObjReq);
+        AppController.getInstance().addToRequestQueue(stringRequest);
     }
 
     // mendefiniskan ketika button di click

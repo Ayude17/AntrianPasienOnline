@@ -8,10 +8,10 @@ import android.widget.TextView;
 import com.simpus.antrianpasienonline.R;
 
 public class ListPoliViewHolder extends RecyclerView.ViewHolder {
-    Button poliView;
+    TextView poliView;
 
     public ListPoliViewHolder(View itemView){
         super(itemView);
-        Button poliView = (Button)itemView.findViewById(R.id.poliView);
+        TextView poliView = (TextView)itemView.findViewById(R.id.poliView);
     }
 }

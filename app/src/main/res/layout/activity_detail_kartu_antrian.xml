@@ -18,17 +18,15 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="5dp">
+        android:layout_marginBottom="15dp">
         <TextView
             android:id="@+id/textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10sp"
             android:text="Detail Kartu Antrian Anda:"
             android:textColor="@color/colorPrimary"
-            android:textSize="16sp"
+            android:textSize="18sp"
             android:textStyle="bold" />
-
     </LinearLayout>
 
     <ScrollView
@@ -40,8 +38,7 @@
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="10dp">
+            android:orientation="vertical">
 
             <RelativeLayout
                 android:id="@+id/nomorantrian"
@@ -68,7 +65,7 @@
                     android:layout_below="@+id/antrian"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="5dp"
-                    android:text="no_antrian"
+                    android:text="P 0001"
                     android:textColor="@color/colorWhite"
                     android:textSize="30sp"
                     android:textStyle="bold" />
@@ -170,19 +167,30 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@color/colorPrimary"
-                android:paddingBottom="24dp">
-
+                android:paddingBottom="15dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="15dp" >
                 <TextView
                     android:id="@+id/ket5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="10dp"
                     android:layout_marginRight="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:text="Prakiraan Waktu Periksa: 07:30 WIB (Rata-rata waktu periksa tiap pasien adalah 30 menit)"
+                    android:textStyle="bold"
+                    android:text="Prakiraan Waktu Periksa: 07:30 WIB"
+                    android:textColor="@color/colorWhite" />
+                <TextView
+                    android:id="@+id/ket7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="(Rata-rata waktu periksa tiap pasien adalah 30 menit)"
                     android:textColor="#fff" />
+                </LinearLayout>
             </RelativeLayout>
 
             <RelativeLayout
@@ -190,8 +198,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:background="@color/colorWhite"
-                android:elevation="4dp"
+                android:background="@color/coloPlus"
                 android:paddingBottom="24dp">
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -216,7 +223,6 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginRight="10dp"
-                        android:layout_marginBottom="10dp"
                         android:text="*Harap datang maksimal 16 menit sebelum waktu prakiraan"
                         android:textColor="@color/colorPrimary"
                         android:textStyle="italic" />
@@ -227,7 +233,6 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
-                        android:layout_marginBottom="10dp"
                         android:text="*Antrian akan dibatalkan apabila pada saat nomor anrian dipanggil tidak ada konfirmasi kahadiran"
                         android:textColor="@color/colorPrimary"
                         android:textStyle="italic" />

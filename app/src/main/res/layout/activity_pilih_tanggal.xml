@@ -15,6 +15,7 @@
     android:background="#87CEFA"
     tools:context=".PilihTanggalActivity">
 
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -34,7 +35,7 @@
                 android:textColor="@color/colorPrimary"
                 tools:ignore="SpUsage" />
             <EditText
-                android:id="@+id/edt_nama"
+                android:id="@+id/edt_rm"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textWebEditText"

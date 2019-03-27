@@ -61,7 +61,7 @@ public class PilihPoliActivity extends AppCompatActivity implements View.OnClick
 
     }
     public void getData(){
-        final String tanggal = "2019-03-25";
+        final String tanggal = getSharedPreferences("simpan", Context.MODE_PRIVATE).getString("tanggal","");
         final ProgressDialog progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("Sedang Mengambil Data...");
         progressDialog.show();

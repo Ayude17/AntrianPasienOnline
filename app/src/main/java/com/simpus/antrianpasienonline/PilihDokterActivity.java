@@ -1,6 +1,7 @@
 package com.simpus.antrianpasienonline;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -33,6 +34,7 @@ public class PilihDokterActivity extends AppCompatActivity {
     RecyclerView recyclerDokterView;
     ArrayList<Dokter>data;
     ListDokterAdapter adapter;
+    private String idpoli, poli;
 
 
     @Override
@@ -52,12 +54,19 @@ public class PilihDokterActivity extends AppCompatActivity {
                 startActivity(Intentantrian);
             }
         });
+
+        //mengambil intent dari intent sebelumnya
+        Bundle extras = getIntent().getExtras();
+        idpoli = extras.getString("idpoli");
+        poli = extras.getString("idpoli");
+
+
         //mengambil data dari database
         getData();
     }
     public void getData(){
-        final String tanggal = "2019-03-25";
-        final String idpoli = "1";
+        final String tanggal = getSharedPreferences("simpan", Context.MODE_PRIVATE).getString("tanggal","");
+
         final ProgressDialog progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("Sedang Mengambil Data...");
         progressDialog.show();

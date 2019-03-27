@@ -93,10 +93,7 @@ public class PilihDokterActivity extends AppCompatActivity {
                         String kuota = object.getString("kuota");
                         String terisi = object.getString("terisi");
 
-
-
                         data.add(new Dokter (id_jadwal,poli,nama,spesialis,start,end,kuota,terisi));
-
 
                         //menambah data ke recycleview
                         LinearLayoutManager layoutManager= new
@@ -109,8 +106,6 @@ public class PilihDokterActivity extends AppCompatActivity {
                         adapter.notifyDataSetChanged();
                         progressDialog.dismiss();
                         recyclerDokterView.setAdapter(adapter);
-
-
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();

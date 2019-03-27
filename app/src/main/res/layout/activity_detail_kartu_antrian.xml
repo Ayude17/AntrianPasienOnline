@@ -59,7 +59,7 @@
                 <!--android:textSize="16sp"-->
 
                 <TextView
-                    android:id="@+id/noAntrian"
+                    android:id="@+id/NoAntrianView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/antrian"
@@ -72,12 +72,11 @@
             </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/namapasien"
+                android:id="@+id/namaPasienRelative"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:background="@color/colorPrimary"
-                android:paddingBottom="24dp">
+                android:background="@color/colorPrimary">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -85,79 +84,207 @@
                     android:layout_marginLeft="10dp"
                     android:gravity="center_horizontal"
                     android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/namapasien"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="PASIEN  "
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:textColor="#fff"/>
+                        <TextView
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_width="14dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="= "
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:textColor="#fff"/>
 
+                        <TextView
+                            android:id="@+id/PasienView"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="NAMA_PASIEN"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:textColor="#fff"/>
+
+                    </LinearLayout>
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="20sp"
+                        android:layout_gravity="center"
                         android:orientation="horizontal">
-
                         <TextView
-                            android:id="@+id/pasien"
+                            android:id="@+id/namapoli"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="POLI  "
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:textColor="#fff"/>
+                        <TextView
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_width="14dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="= "
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:textColor="#fff"/>
+                        <TextView
+                            android:id="@+id/PoliView"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginTop="8dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginEnd="15sp"
-                            android:layout_marginRight="15sp"
-                            android:text="Nama Pasien:"
+                            android:layout_gravity="center"
+                            android:text="NAMA_POLI"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
                             android:textColor="#fff"
-                            android:textStyle="bold" />
+                            android:layout_weight="1"/>
 
-                        <TextView
-                            android:id="@+id/nmPasien"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="nama_pasien"
-                            android:textColor="#fff"
-                            android:textStyle="bold" />
                     </LinearLayout>
-
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/namaDokter"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="DOKTER  "
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:textColor="#fff"/>
+                        <TextView
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_width="14dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="= "
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:textColor="#fff"/>
 
                         <TextView
-                            android:id="@+id/poli"
+                            android:id="@+id/DokterView"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginTop="8dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginEnd="15sp"
-                            android:layout_marginRight="15sp"
-                            android:text="Nama Poli     :"
-                            android:textColor="#fff"
-                            android:textStyle="bold" />
+                            android:layout_gravity="center"
+                            android:text="NAMA_DOKTER"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:textColor="#fff"/>
 
-                        <TextView
-                            android:id="@+id/nmPoli"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="nama_poli"
-                            android:textColor="#fff"
-                            android:textStyle="bold" />
                     </LinearLayout>
-
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/nomorRM"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="NOMOR RUJUKAN "
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:textColor="#fff"/>
+                        <TextView
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_width="14dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="= "
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:textColor="#fff"/>
 
                         <TextView
-                            android:id="@+id/dokter"
+                            android:id="@+id/RujukanView"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginTop="8dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginEnd="15sp"
-                            android:layout_marginRight="15sp"
-                            android:text="Nama Dokter:"
-                            android:textColor="#fff"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/nmDokter"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="nama_dokter"
-                            android:textColor="#fff"
-                            android:textStyle="bold" />
+                            android:layout_gravity="center"
+                            android:text="NOMOR_RUJUKAN"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:textColor="#fff"/>
                     </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/tgl_daftar"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="TANGGAL DAFTAR"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:textColor="#fff"/>
+                        <TextView
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_width="14dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="= "
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:textColor="#fff"/>
+
+                        <TextView
+                            android:id="@+id/TglView"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="TANGGAL_ANTRIAN"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:textColor="#fff"/>
+                    </LinearLayout>
+
                 </LinearLayout>
             </RelativeLayout>
 
@@ -168,20 +295,61 @@
                 android:layout_marginTop="10dp"
                 android:background="@color/colorPrimary"
                 android:paddingBottom="15dp">
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:layout_marginTop="15dp" >
-                <TextView
-                    android:id="@+id/ket5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:textStyle="bold"
-                    android:text="Prakiraan Waktu Periksa: 07:30 WIB"
-                    android:textColor="@color/colorWhite" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp">
+                        <TextView
+                            android:id="@+id/ket5"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginBottom="8dp"
+                            android:layout_width="170dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Prakiraan Waktu Periksa"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:textColor="#fff"/>
+                        <TextView
+                            android:layout_marginBottom="8dp"
+                            android:layout_width="14dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="= "
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:textColor="#fff"/>
+
+                        <TextView
+                            android:id="@+id/waktuView"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="8dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="00:00"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:textColor="#fff"/>
+                        <TextView
+                            android:id="@+id/WibView"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginBottom="8dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="WIB"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:textColor="#fff"/>
+                    </LinearLayout>
                 <TextView
                     android:id="@+id/ket7"
                     android:layout_width="wrap_content"
@@ -198,7 +366,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:background="@color/coloPlus"
+                android:background="@color/colorPlus"
                 android:paddingBottom="24dp">
                 <LinearLayout
                     android:layout_width="wrap_content"

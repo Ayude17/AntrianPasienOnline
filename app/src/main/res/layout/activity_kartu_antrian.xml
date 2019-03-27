@@ -110,7 +110,8 @@
                     android:text="Catatan*"
                     android:textSize="18sp"
                     android:textStyle="bold"
-                    android:textColor="@color/colorPrimary"/>
+                    android:textColor="@color/colorPrimary"
+                    android:layout_marginStart="10dp" />
                 <TextView
                     android:id="@+id/ket5"
                     android:layout_width="wrap_content"

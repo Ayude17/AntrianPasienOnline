@@ -144,8 +144,8 @@ public class KonfirmasiActivity extends AppCompatActivity implements View.OnClic
                                 //Menyimpan data Login
                                 Intent intent = new Intent(KonfirmasiActivity.this,DetailKartuAntrianActivity.class);
                                 intent.putExtra("Nama", namaPasien);
-                                intent.putExtra("Poli", poli);
-                                intent.putExtra("Dokter", namaDokter);
+                                intent.putExtra("poli", poli);
+                                intent.putExtra("namaDokter", namaDokter);
                                 intent.putExtra("no_rujukan",norujukan);
                                 intent.putExtra("tanggal", tanggalAntri);
                                 intent.putExtra("norm", norm);

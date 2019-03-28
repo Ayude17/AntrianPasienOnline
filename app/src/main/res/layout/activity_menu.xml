@@ -79,7 +79,7 @@
             android:background="@drawable/capsule"
             android:backgroundTint="@color/colorPrimary"
             android:hint="MENDAFTAR ANTRIAN"
-            android:textColorHint="#FFFF"
+            android:textColorHint="@color/colorPrimaryDark"
             android:textSize="16sp"
              />
         <Button
@@ -90,8 +90,8 @@
             android:layout_marginTop="10dp"
             android:background="@drawable/capsule"
             android:backgroundTint="@color/colorPrimary"
-            android:hint="CEK ANTRIAN SAYA"
-            android:textColorHint="#FFFF"
+            android:hint="CEK RIWAYAT ANTRIAN SAYA"
+            android:textColorHint="@color/colorPrimaryDark"
             android:textSize="16sp" />
     </LinearLayout>
     </ScrollView>

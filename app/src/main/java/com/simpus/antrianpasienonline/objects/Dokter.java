@@ -29,9 +29,7 @@ public class Dokter {
         this.id_jadwal = id_jadwal;
     }
 
-    public String getPoli() {
-        return poli;
-    }
+    public String getPoli() { return poli; }
 
     public void setPoli(String poli) {
         this.poli = poli;

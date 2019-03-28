@@ -41,8 +41,8 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.antrianSaya:
-//                Intent IntenOut = new Intent(MenuActivity.this, FinishedActivity.class);
-//                startActivity(IntenOut);
+                Intent IntenOut = new Intent(MenuActivity.this, CekHistoriAntrianActivity.class);
+                startActivity(IntenOut);
                 Toast.makeText(this, "anda memilih antrian saya", Toast.LENGTH_SHORT).show();
                 break;
 

@@ -13,7 +13,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CekAntrianActivity"></activity>
+        <activity android:name=".CekHistoriAntrianActivity"></activity>
         <activity android:name=".DetailKartuAntrianActivity" />
         <activity android:name=".KartuAntrianActivity" />
         <activity android:name=".PilihDokterActivity" />

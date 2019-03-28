@@ -25,7 +25,7 @@ public class ListHistoriAntrianAdapter extends RecyclerView.Adapter<ListHistoriA
     @Override
     public ListHistoriAntrianViewHolder onCreateViewHolder(ViewGroup parent, int viewType){
         View layoutView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_list_histori_antrian, null);
-        ListDokterViewHolder view = new ListDokterViewHolder(layoutView);
+        ListHistoriAntrianViewHolder view = new ListHistoriAntrianViewHolder(layoutView);
         return view;
     }
     @Override

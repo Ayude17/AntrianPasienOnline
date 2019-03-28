@@ -20,6 +20,14 @@ public class DetailKartuAntrianActivity extends AppCompatActivity implements Vie
         setContentView(R.layout.activity_detail_kartu_antrian);
         btn_batal_antri =(Button)findViewById(R.id.btn_batal_antri );
         btn_tanya_admin =(Button)findViewById(R.id.btn_tanya_admin );
+        NoAntrianView =(TextView) findViewById(R.id.NoAntrianView );
+        PasienView =(TextView) findViewById(R.id.PasienView );
+        PoliView =(TextView) findViewById(R.id.PoliView );
+        DokterView =(TextView) findViewById(R.id.DokterView );
+        RujukanView =(TextView) findViewById(R.id.RujukanView );
+        TglView =(TextView) findViewById(R.id.TglView );
+        waktuView =(TextView) findViewById(R.id.waktuView );
+
 
         //mendefinisikan onclick listener
         btn_batal_antri.setOnClickListener(this);
@@ -30,14 +38,16 @@ public class DetailKartuAntrianActivity extends AppCompatActivity implements Vie
         idjadwal = extras.getString("id_jadwal");
         poli = extras.getString("poli");
         namaDokter = extras.getString("namaDokter");
-        nomorAntrian= extras.getString("nomor");
+        nomorAntrian= extras.getString("no_antrian");
         waktuAntrian= extras.getString("estimasi");
 
         //mendefinisikan variable dari shared preference
-        namaPasien = extras.getString("Nama");
+        namaPasien = getSharedPreferences("DATA", Context.MODE_PRIVATE).getString("nama","");
         norm = getSharedPreferences("data", Context.MODE_PRIVATE).getString("no_rm","");
-        norujukan= getSharedPreferences("simpan", Context.MODE_PRIVATE).getString("no_rujuk","");
-        tanggalAntri= getSharedPreferences("simpan", Context.MODE_PRIVATE).getString("tanggal","");
+        norujukan= extras.getString("no_rujukan");
+        tanggalAntri= extras.getString("tanggal");
+//        norujukan= getSharedPreferences("simpan", Context.MODE_PRIVATE).getString("no_rujuk","");
+//        tanggalAntri= getSharedPreferences("simpan", Context.MODE_PRIVATE).getString("tanggal","");
 
         PasienView.setText(namaPasien);
         PoliView.setText(poli);

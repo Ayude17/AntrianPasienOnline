@@ -146,11 +146,11 @@ public class KonfirmasiActivity extends AppCompatActivity implements View.OnClic
                                 intent.putExtra("Nama", namaPasien);
                                 intent.putExtra("Poli", poli);
                                 intent.putExtra("Dokter", namaDokter);
-                                intent.putExtra("Rujukan",norujukan);
-                                intent.putExtra("Tanggal", tanggalAntri);
+                                intent.putExtra("norujukan",norujukan);
+                                intent.putExtra("tanggal", tanggalAntri);
                                 intent.putExtra("norm", norm);
                                 intent.putExtra("estimasi", object.getString("estimasi"));
-                                intent.putExtra("nomor", object.getString("nomor"));
+                                intent.putExtra("no_antrian", object.getString("nomor"));
                                 startActivity(intent);
                                 //menampilkan pesan berhasil
                                 Toast.makeText(KonfirmasiActivity.this,object.getString("message"),Toast.LENGTH_LONG).show();

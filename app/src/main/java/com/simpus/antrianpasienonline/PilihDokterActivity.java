@@ -58,7 +58,7 @@ public class PilihDokterActivity extends AppCompatActivity {
         //mengambil intent dari intent sebelumnya
         Bundle extras = getIntent().getExtras();
         idpoli = extras.getString("idpoli");
-        poli = extras.getString("idpoli");
+        poli = extras.getString("poli");
 
 
         //mengambil data dari database

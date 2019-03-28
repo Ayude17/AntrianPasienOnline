@@ -30,7 +30,7 @@ public class ListHistoriAntrianAdapter extends RecyclerView.Adapter<ListHistoriA
     }
     @Override
     public void onBindViewHolder(ListHistoriAntrianViewHolder holder, int position){
-        holder.tglHistoriView.setText(dataHistori.get(position).getTanggal_antri());
+        holder.tglHistoriView.setText(dataHistori.get(position).getTanggal());
         holder.noAntrianHistoriView.setText(dataHistori.get(position).getNo_antrian());
         holder.poliHistoriView.setText(dataHistori.get(position).getPoli());
     }

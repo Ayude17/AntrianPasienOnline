@@ -134,23 +134,23 @@ public class KonfirmasiActivity extends AppCompatActivity implements View.OnClic
                     public void onResponse(String response){
                         Log.d("CREATE", response);
                         try{
-                            //mengubah string menjadi jsonObject
-                            JsonArray object = new JsonArray(response);
+                            //mengubah string menjadi jsonArray
+                            JSONArray arrayResponse = new JSONArray(response);
+                            JSONObject object = arrayResponse.getJSONObject(0);
                             //mendapatkan string dari status
                             String status = object.getString("status");
                             //jika berhasil ditambahkan
                             if(status.equalsIgnoreCase("success")){
                                 //Menyimpan data Login
-                                JSONArray loginData = object.getJSONArrat("data");
                                 Intent intent = new Intent(KonfirmasiActivity.this,DetailKartuAntrianActivity.class);
                                 intent.putExtra("Nama", namaPasien);
                                 intent.putExtra("Poli", poli);
                                 intent.putExtra("Dokter", namaDokter);
                                 intent.putExtra("Rujukan",norujukan);
                                 intent.putExtra("Tanggal", tanggalAntri);
-                                intent.putExtra("estimasi", loginData.getString("estimasi"));
-                                intent.putExtra("nomor", loginData.getString("nomor"));
-                                intent.putExtra("norm", loginData.getString("norm"));
+                                intent.putExtra("norm", norm);
+                                intent.putExtra("estimasi", object.getString("estimasi"));
+                                intent.putExtra("nomor", object.getString("nomor"));
                                 startActivity(intent);
                                 //menampilkan pesan berhasil
                                 Toast.makeText(KonfirmasiActivity.this,object.getString("message"),Toast.LENGTH_LONG).show();

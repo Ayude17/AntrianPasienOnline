@@ -32,8 +32,9 @@ public class DetailKartuAntrianActivity extends AppCompatActivity implements Vie
         namaDokter = extras.getString("namaDokter");
         nomorAntrian= extras.getString("nomor");
         waktuAntrian= extras.getString("estimasi");
+
         //mendefinisikan variable dari shared preference
-        namaPasien = getSharedPreferences("data", Context.MODE_PRIVATE).getString("nama","");
+        namaPasien = extras.getString("Nama");
         norm = getSharedPreferences("data", Context.MODE_PRIVATE).getString("no_rm","");
         norujukan= getSharedPreferences("simpan", Context.MODE_PRIVATE).getString("no_rujuk","");
         tanggalAntri= getSharedPreferences("simpan", Context.MODE_PRIVATE).getString("tanggal","");

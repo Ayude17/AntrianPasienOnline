@@ -146,7 +146,7 @@ public class KonfirmasiActivity extends AppCompatActivity implements View.OnClic
                                 intent.putExtra("Nama", namaPasien);
                                 intent.putExtra("Poli", poli);
                                 intent.putExtra("Dokter", namaDokter);
-                                intent.putExtra("norujukan",norujukan);
+                                intent.putExtra("no_rujukan",norujukan);
                                 intent.putExtra("tanggal", tanggalAntri);
                                 intent.putExtra("norm", norm);
                                 intent.putExtra("estimasi", object.getString("estimasi"));

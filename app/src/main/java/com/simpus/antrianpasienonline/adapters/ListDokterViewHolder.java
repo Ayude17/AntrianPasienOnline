@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.simpus.antrianpasienonline.KartuAntrianActivity;
+import com.simpus.antrianpasienonline.KonfirmasiActivity;
 import com.simpus.antrianpasienonline.PilihDokterActivity;
 import com.simpus.antrianpasienonline.R;
 
@@ -23,9 +24,15 @@ public class ListDokterViewHolder extends RecyclerView.ViewHolder {
                 //mengambil posisi item
                 int position = getAdapterPosition();
                 //membuat inten untuk menjalankan activity baru
-                Intent intent = new Intent(view.getContext(), KartuAntrianActivity.class);
-                intent.putExtra("idpoli", ListPoliAdapter.data.get(position).getId_poli());
-                intent.putExtra("poli", ListPoliAdapter.data.get(position).getPoli());
+                Intent intent = new Intent(view.getContext(), KonfirmasiActivity.class);
+                intent.putExtra("id_jadwal", ListDokterAdapter.data.get(position).getId_jadwal());
+                intent.putExtra("poli", ListDokterAdapter.data.get(position).getPoli());
+                intent.putExtra("namaDokter", ListDokterAdapter.data.get(position).getNama());
+                intent.putExtra("spesialis", ListDokterAdapter.data.get(position).getSpesialis());
+                intent.putExtra("start", ListDokterAdapter.data.get(position).getStart());
+                intent.putExtra("end", ListDokterAdapter.data.get(position).getEnd());
+                intent.putExtra("kuota", ListDokterAdapter.data.get(position).getKuota());
+                intent.putExtra("terisi", ListDokterAdapter.data.get(position).getTerisi());
                 //menjalankan intent
                 view.getContext().startActivity(intent);
 

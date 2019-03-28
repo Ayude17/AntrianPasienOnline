@@ -27,7 +27,7 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
         antrianSaya.setOnClickListener(this);
 
         //mengubah tulisan username
-        txt_username.setText(getSharedPreferences("DATA", Context.MODE_PRIVATE).getString("username",""));
+        txt_username.setText(getSharedPreferences("data", Context.MODE_PRIVATE).getString("username",""));
     }
 
     // mendefiniskan ketika button di click

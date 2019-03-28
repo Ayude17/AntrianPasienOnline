@@ -1,14 +1,18 @@
 package com.simpus.antrianpasienonline;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class DetailKartuAntrianActivity extends AppCompatActivity implements View.OnClickListener  {
-    private Button btn_batal_antri,btn_tanya_admin;
+    Button btn_batal_antri,btn_tanya_admin;
+    TextView NoAntrianView,PasienView,PoliView,DokterView,RujukanView,TglView,waktuView;
+    String norm,norujukan,idjadwal,poli,namaDokter,namaPasien,nomorAntrian,waktuAntrian,tanggalAntri;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +24,28 @@ public class DetailKartuAntrianActivity extends AppCompatActivity implements Vie
         //mendefinisikan onclick listener
         btn_batal_antri.setOnClickListener(this);
         btn_tanya_admin.setOnClickListener(this);
+
+        //mengambil intent dari intent sebelumnya
+        Bundle extras = getIntent().getExtras();
+        idjadwal = extras.getString("id_jadwal");
+        poli = extras.getString("poli");
+        namaDokter = extras.getString("namaDokter");
+        nomorAntrian= extras.getString("nomor");
+        waktuAntrian= extras.getString("estimasi");
+        //mendefinisikan variable dari shared preference
+        namaPasien = getSharedPreferences("data", Context.MODE_PRIVATE).getString("nama","");
+        norm = getSharedPreferences("data", Context.MODE_PRIVATE).getString("no_rm","");
+        norujukan= getSharedPreferences("simpan", Context.MODE_PRIVATE).getString("no_rujuk","");
+        tanggalAntri= getSharedPreferences("simpan", Context.MODE_PRIVATE).getString("tanggal","");
+
+        PasienView.setText(namaPasien);
+        PoliView.setText(poli);
+        DokterView.setText(namaDokter);
+        RujukanView.setText(norujukan);
+        TglView.setText(tanggalAntri);
+        NoAntrianView.setText(nomorAntrian);
+        waktuView.setText(waktuAntrian);
+
 
     }
     // mendefiniskan ketika button di click

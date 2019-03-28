@@ -34,7 +34,7 @@ import java.util.Map;
 public class KonfirmasiActivity extends AppCompatActivity implements View.OnClickListener  {
     private Button btn_batal,btn_antri;
     TextView PasienView,PoliView,DokterView, RujukanView, TglView;
-    private String norm,norujukan,idjadwal,poli,namaDokter,namaPasien,namaPoli, nomorrujukan;
+    String norm,norujukan,idjadwal,poli,namaDokter,namaPasien,namaPoli,tanggalAntri;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,7 +60,16 @@ public class KonfirmasiActivity extends AppCompatActivity implements View.OnClic
         poli = extras.getString("poli");
         namaDokter = extras.getString("namaDokter");
         //mendefinisikan variable dari shared preference
-        namaPasien = getSharedPreferences("data", Context.MODE_PRIVATE).getString("nama","");
+        namaPasien = getSharedPreferences("DATA", Context.MODE_PRIVATE).getString("nama","");
+        norm = getSharedPreferences("DATA", Context.MODE_PRIVATE).getString("no_rm","");
+        norujukan= getSharedPreferences("simpan", Context.MODE_PRIVATE).getString("no_rujuk","");
+        tanggalAntri= getSharedPreferences("simpan", Context.MODE_PRIVATE).getString("tanggal","");
+
+        PasienView.setText(namaPasien);
+        PoliView.setText(poli);
+        DokterView.setText(namaDokter);
+        RujukanView.setText(norujukan);
+        TglView.setText(tanggalAntri);
 
 
     }
@@ -77,33 +86,34 @@ public class KonfirmasiActivity extends AppCompatActivity implements View.OnClic
                 break;
 
             case R.id.btn_antri:
+                sendData();
 //                Intent IntenOut = new Intent(MenuActivity.this, FinishedActivity.class);
 //                startActivity(IntenOut);
-                AlertDialog.Builder builder1 = new AlertDialog.Builder(KonfirmasiActivity.this);
-                builder1.setMessage("Write your message here.");
-                builder1.setCancelable(true);
-
-                builder1.setPositiveButton(
-                        "Yes",
-                        new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int id) {
-                                sendData();
-                                dialog.cancel();
-                            }
-                        });
-
-                builder1.setNegativeButton(
-                        "No",
-                        new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int id) {
-                                dialog.cancel();
-                            }
-                        });
-
-                AlertDialog alert11 = builder1.create();
-                alert11.show();
-                Toast.makeText(this, "memulai antri", Toast.LENGTH_SHORT).show();
-                break;
+//                AlertDialog.Builder builder1 = new AlertDialog.Builder(KonfirmasiActivity.this);
+//                builder1.setMessage("Apa Anda sudah yakin?");
+//                builder1.setCancelable(true);
+//
+//                builder1.setPositiveButton(
+//                        "Ya",
+//                        new DialogInterface.OnClickListener() {
+//                            public void onClick(DialogInterface dialog, int id) {
+//                                sendData();
+//                                dialog.cancel();
+//                            }
+//                        });
+//
+//                builder1.setNegativeButton(
+//                        "Tidak",
+//                        new DialogInterface.OnClickListener() {
+//                            public void onClick(DialogInterface dialog, int id) {
+//                                dialog.cancel();
+//                            }
+//                        });
+//
+//                AlertDialog alert11 = builder1.create();
+//                alert11.show();
+//                Toast.makeText(this, "memulai antri", Toast.LENGTH_SHORT).show();
+//                break;
 
         }
     }
@@ -125,23 +135,23 @@ public class KonfirmasiActivity extends AppCompatActivity implements View.OnClic
                         Log.d("CREATE", response);
                         try{
                             //mengubah string menjadi jsonObject
-                            JSONObject object = new JSONObject(response);
+                            JsonArray object = new JsonArray(response);
                             //mendapatkan string dari status
                             String status = object.getString("status");
                             //jika berhasil ditambahkan
                             if(status.equalsIgnoreCase("success")){
                                 //Menyimpan data Login
-                                JSONObject loginData = object.getJSONObject("data");
+                                JSONArray loginData = object.getJSONArrat("data");
                                 Intent intent = new Intent(KonfirmasiActivity.this,DetailKartuAntrianActivity.class);
-                                intent.putExtra("Nama", PasienView.getText().toString());
-                                intent.putExtra("Poli", PoliView.getText().toString());
-                                intent.putExtra("Dokter", DokterView.getText().toString());
-                                intent.putExtra("Rujukan", RujukanView.getText().toString());
-                                intent.putExtra("Tanggal", TglView.getText().toString());
+                                intent.putExtra("Nama", namaPasien);
+                                intent.putExtra("Poli", poli);
+                                intent.putExtra("Dokter", namaDokter);
+                                intent.putExtra("Rujukan",norujukan);
+                                intent.putExtra("Tanggal", tanggalAntri);
                                 intent.putExtra("estimasi", loginData.getString("estimasi"));
                                 intent.putExtra("nomor", loginData.getString("nomor"));
                                 intent.putExtra("norm", loginData.getString("norm"));
-
+                                startActivity(intent);
                                 //menampilkan pesan berhasil
                                 Toast.makeText(KonfirmasiActivity.this,object.getString("message"),Toast.LENGTH_LONG).show();
                                 startActivity(intent);
@@ -174,7 +184,7 @@ public class KonfirmasiActivity extends AppCompatActivity implements View.OnClic
                 //menambahkan parameter post, nama put sama dengan nama variable pada webservice PHP
                 params.put("idjadwal", idjadwal);
                 params.put("norm", norm);
-                params.put("tanggal", TglView.getText().toString());
+                params.put("tanggal", tanggalAntri);
                 params.put("norujukan", norujukan);
 
                 return params;

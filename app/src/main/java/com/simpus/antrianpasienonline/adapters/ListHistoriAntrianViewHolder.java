@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
 
+import com.simpus.antrianpasienonline.DetailKartuAntrianActivity;
 import com.simpus.antrianpasienonline.KonfirmasiActivity;
 import com.simpus.antrianpasienonline.R;
 
@@ -22,12 +23,12 @@ public class ListHistoriAntrianViewHolder extends RecyclerView.ViewHolder{
                 //mengambil posisi item
                 int position = getAdapterPosition();
                 //membuat inten untuk menjalankan activity baru
-                Intent intent = new Intent(view.getContext(), KonfirmasiActivity.class);
-                intent.putExtra("no_antrian", ListDokterAdapter.data.get(position).getNo_antrian());
-                intent.putExtra("tanggal_antrian", ListDokterAdapter.data.get(position).getTanggal_antri());
-                intent.putExtra("poli", ListDokterAdapter.data.get(position).getPoli());
-                intent.putExtra("dokter", ListDokterAdapter.data.get(position).getDokter());
-                intent.putExtra("no_rujukan", ListDokterAdapter.data.get(position).getNo_rujukan());
+                Intent intent = new Intent(view.getContext(), DetailKartuAntrianActivity.class);
+                intent.putExtra("no_antrian", ListHistoriAntrianAdapter.dataHistori.get(position).getNo_antrian());
+                intent.putExtra("tanggal_antrian", ListHistoriAntrianAdapter.dataHistori.get(position).getTanggal_antri());
+                intent.putExtra("poli", ListHistoriAntrianAdapter.dataHistori.get(position).getPoli());
+                intent.putExtra("dokter", ListHistoriAntrianAdapter.dataHistori.get(position).getDokter());
+                intent.putExtra("no_rujukan", ListHistoriAntrianAdapter.dataHistori.get(position).getNo_rujukan());
 
                 //menjalankan intent
                 view.getContext().startActivity(intent);

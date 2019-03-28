@@ -12,6 +12,7 @@ import android.widget.Toast;
 public class MenuActivity extends AppCompatActivity implements View.OnClickListener {
     private Button dafAntrian, antrianSaya;
     TextView txt_username;
+    String username;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,9 +26,10 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
         //mendefinisikan click listener
         dafAntrian.setOnClickListener(this);
         antrianSaya.setOnClickListener(this);
+        username = getSharedPreferences("DATA", Context.MODE_PRIVATE).getString("username","");
 
-        //mengubah tulisan username
-        txt_username.setText(getSharedPreferences("data", Context.MODE_PRIVATE).getString("username",""));
+                //mengubah tulisan username
+        txt_username.setText(username);
     }
 
     // mendefiniskan ketika button di click

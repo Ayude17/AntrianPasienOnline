@@ -75,24 +75,41 @@
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-
             android:background="@drawable/capsule"
             android:backgroundTint="@color/colorPrimary"
             android:hint="MENDAFTAR ANTRIAN"
             android:textColorHint="@color/colorPrimaryDark"
             android:textSize="16sp"
-             />
-        <Button
-            android:id="@+id/antrianSaya"
-            style="@android:style/Widget.Button"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/capsule"
-            android:backgroundTint="@color/colorPrimary"
-            android:hint="CEK RIWAYAT ANTRIAN SAYA"
-            android:textColorHint="@color/colorPrimaryDark"
-            android:textSize="16sp" />
-    </LinearLayout>
+            />
+
+            <Button
+                android:id="@+id/antrianSaya"
+                style="@android:style/Widget.Button"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/capsule"
+                android:backgroundTint="@color/colorPrimary"
+                android:hint="CEK RIWAYAT ANTRIAN SAYA"
+                android:textColorHint="@color/colorPrimaryDark"
+                android:textSize="16sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Anda ingin keluar aplikasi?"
+                android:textColor="#fff" />
+            <Button
+                android:id="@+id/btn_logout"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:hint="LOGOUT"
+                android:background="@drawable/capsule"
+                android:backgroundTint="@color/colorPlus"
+                android:textColorHint="@color/colorPrimary"
+                android:textStyle="bold" />
+        </LinearLayout>
     </ScrollView>
 </RelativeLayout>

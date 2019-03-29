@@ -30,40 +30,41 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class DaftarActivity extends AppCompatActivity implements View.OnClickListener {
-//public class DaftarActivity extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener {
+    //public class DaftarActivity extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener {
     Button btnDaftar, btnMasuk, btnTglLhr;
-    EditText edtNama, edtTglLhr, edtNIK, edtNoRM, edtNoJaminan, edtAlamat, edtNoHP,edtPswd;
+    EditText edtNama, edtTglLhr, edtNIK, edtNoRM, edtNoJaminan, edtAlamat, edtNoHP, edtPswd;
     private int mYear, mMonth, mDay;
-    String nama, jk,tgl_lahir, nik, noRM, noJaminan, alamat, noHP, pswd;
+    String nama, jk, tgl_lahir, nik, noRM, noJaminan, alamat, noHP, pswd;
     RadioGroup RGgender;
     RadioButton radLK, radPR;
+    private RadioButton radioButton;
     boolean doubleBackToExitPressedOnce = false;
 
-        @Override
-        protected void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_daftar);
-    //        button
-            btnDaftar = (Button) findViewById(R.id.btn_daftar);
-            btnDaftar.setOnClickListener(this);
-            btnMasuk = (Button) findViewById(R.id.btn_masuk);
-            btnMasuk.setOnClickListener(this);
-            btnTglLhr = (Button)findViewById(R.id.btn_tglLahir);
-            btnTglLhr.setOnClickListener(this);
-    //        Radio group
-            RGgender = (RadioGroup) findViewById(R.id.gender);
-            radLK = (RadioButton) findViewById(R.id.rad_lk);
-            radPR = (RadioButton)findViewById(R.id.rad_pr);
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_daftar);
+        //        button
+        btnDaftar = (Button) findViewById(R.id.btn_daftar);
+        btnDaftar.setOnClickListener(this);
+        btnMasuk = (Button) findViewById(R.id.btn_masuk);
+        btnMasuk.setOnClickListener(this);
+        btnTglLhr = (Button) findViewById(R.id.btn_tglLahir);
+        btnTglLhr.setOnClickListener(this);
+        //        Radio group
+        RGgender = (RadioGroup) findViewById(R.id.gender);
+        radLK = (RadioButton) findViewById(R.id.rad_lk);
+        radPR = (RadioButton) findViewById(R.id.rad_pr);
 //            RGgender.setOnCheckedChangeListener(this);
-    //        Edit Text
-            edtNama = (EditText) findViewById(R.id.edt_nama);
-            edtTglLhr = (EditText) findViewById(R.id.edt_tglLahir);
-            edtNIK = (EditText) findViewById(R.id.edt_nik);
-            edtNoRM = (EditText) findViewById(R.id.edt_noRM);
-            edtNoJaminan = (EditText) findViewById(R.id.edt_noJaminan);
-            edtAlamat = (EditText) findViewById(R.id.edt_alamat);
-            edtNoHP = (EditText) findViewById(R.id.ed_noHp);
-            edtPswd = (EditText) findViewById(R.id.edt_pswd);
+        //        Edit Text
+        edtNama = (EditText) findViewById(R.id.edt_nama);
+        edtTglLhr = (EditText) findViewById(R.id.edt_tglLahir);
+        edtNIK = (EditText) findViewById(R.id.edt_nik);
+        edtNoRM = (EditText) findViewById(R.id.edt_noRM);
+        edtNoJaminan = (EditText) findViewById(R.id.edt_noJaminan);
+        edtAlamat = (EditText) findViewById(R.id.edt_alamat);
+        edtNoHP = (EditText) findViewById(R.id.ed_noHp);
+        edtPswd = (EditText) findViewById(R.id.edt_pswd);
 
 //            btnDaftar.setOnClickListener(new View.OnClickListener() {
 //                @Override
@@ -80,86 +81,94 @@ public class DaftarActivity extends AppCompatActivity implements View.OnClickLis
 //                    finish();
 //                }
 //            });
+    }
+
+    @Override
+    public void onClick(View v) {
+        if (v == btnDaftar) {
+            btnDaftar.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+//                    int selectedId = RGgender.getCheckedRadioButtonId();
+//                     radioButton = (RadioButton) findViewById(selectedId);
+//                     Toast.makeText(DaftarActivity.this,radioButton.getText(),Toast.LENGTH_SHORT).show();
+
+                    nama = edtNama.getText().toString();
+                    tgl_lahir = edtTglLhr.getText().toString();
+                    nik = edtNIK.getText().toString();
+                    noRM = edtNoRM.getText().toString();
+                    noJaminan = edtNoJaminan.getText().toString();
+                    alamat = edtAlamat.getText().toString();
+                    pswd = edtPswd.getText().toString();
+                    postRegister();
+
+                    //                    String nama, jk,tgl_lahir, nik, noRM, noJaminan, alamat, noHP, pswd;
+                }
+            });
         }
+        if (v == btnMasuk) {
+            //       button untuk membatalkan eksekusi
+            btnMasuk.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(DaftarActivity.this, LoginActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
+            });
+        }
+        if (v == btnTglLhr) {
+            // Get Current Date
+            final Calendar c = Calendar.getInstance();
+            mYear = c.get(Calendar.YEAR);
+            mMonth = c.get(Calendar.MONTH);
+            mDay = c.get(Calendar.DAY_OF_MONTH);
 
-        @Override
-        public void onClick(View v) {
-            if (v == btnDaftar) {
-                btnDaftar.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-    //                    nama = edtNama.getText().toString();
-    //                    jk = .getText().toString();
-    //                    tgl_lahir = edtTglLhr.getText().toString();
-    //                    nik = edtNIK.getText().toString();
-    //                    noRM = edtNoRM.getText().toString();
-    //                    noJaminan = edtNoJaminan.getText().toString();
-    //                    alamat = edtAlamat.getText().toString();
-    //                    pswd = edtPswd.getText().toString();
-                        postRegister();
+            DatePickerDialog datePickerDialog = new DatePickerDialog(this,
+                    new DatePickerDialog.OnDateSetListener() {
+                        @Override
+                        public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                            month = month + 1;
+                            String formattedMonth = "" + month;
+                            String formattedDayOfMonth = "" + dayOfMonth;
+                            if (month < 10) {
 
-    //                    String nama, jk,tgl_lahir, nik, noRM, noJaminan, alamat, noHP, pswd;
-                    }
-                });
-            }
-            if (v == btnMasuk) {
-    //       button untuk membatalkan eksekusi
-                btnMasuk.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent intent = new Intent(DaftarActivity.this, LoginActivity.class);
-                        startActivity(intent);
-                        finish();
-                    }
-                });
-            }
-            if (v == btnTglLhr){
-                // Get Current Date
-                final Calendar c = Calendar.getInstance();
-                mYear = c.get(Calendar.YEAR);
-                mMonth = c.get(Calendar.MONTH);
-                mDay = c.get(Calendar.DAY_OF_MONTH);
-
-                DatePickerDialog datePickerDialog = new DatePickerDialog(this,
-                        new DatePickerDialog.OnDateSetListener() {
-                            @Override
-                            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                                month = month + 1;
-                                String formattedMonth = "" + month;
-                                String formattedDayOfMonth = "" + dayOfMonth;
-                                if(month < 10){
-
-                                    formattedMonth = "0" + month;
-                                }
-                                if(dayOfMonth < 10){
-
-                                    formattedDayOfMonth = "0" + dayOfMonth;
-                                }
-
-                                edtTglLhr.setText(year + "-" + formattedMonth+ "-" +formattedDayOfMonth );
+                                formattedMonth = "0" + month;
                             }
-                        }, mYear,mMonth,mDay);
-                datePickerDialog.show();
-            }
-            if (v == radLK) {
-    //       button untuk membatalkan eksekusi
-                btnMasuk.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                    jk = "1";
-                    }
-                });
-            }
-            if (v == radPR) {
-    //       button untuk membatalkan eksekusi
-                btnMasuk.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        jk = "2";
-                    }
-                });
-            }
+                            if (dayOfMonth < 10) {
+
+                                formattedDayOfMonth = "0" + dayOfMonth;
+                            }
+
+                            edtTglLhr.setText(year + "-" + formattedMonth + "-" + formattedDayOfMonth);
+                        }
+                    }, mYear, mMonth, mDay);
+            datePickerDialog.show();
         }
+        if (v == radioButton){
+
+
+
+        }
+//        if (v == radLK) {
+//            //       button untuk membatalkan eksekusi
+//            btnMasuk.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    jk = "1";
+//                }
+//            });
+//        }
+//        if (v == radPR) {
+//            //       button untuk membatalkan eksekusi
+//            btnMasuk.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    jk = "2";
+//                }
+//            });
+//        }
+    }
 
     public void postRegister(){
 
@@ -204,33 +213,34 @@ public class DaftarActivity extends AppCompatActivity implements View.OnClickLis
                     public void onErrorResponse(VolleyError error){
                         Log.d("CREATE", error.toString());
                         progressDialog.dismiss();
-                        Toast.makeText(DaftarActivity.this,"Pastikan Perangkat Sudah Tersambung Internet",Toast.LENGTH_LONG).show();
+                        Toast.makeText(DaftarActivity.this,"Pastikan semua data telah terisi",Toast.LENGTH_LONG).show();
                     }
                 }){
 
             @Override
             protected Map<String,String> getParams(){
                 Map<String,String> params = new HashMap<String, String>();
-                //menambahkan parameter post, nama put sama dengan nama variable pada webservice PHP
-                params.put("nama", edtNama.getText().toString());
-                params.put("jk", jk);
-                params.put("tgl_lahir", edtTglLhr.getText().toString());
-                params.put("nik", edtNIK.getText().toString());
-                params.put("no_rm", edtNoRM.getText().toString());
-                params.put("no_jaminan", edtNoJaminan.getText().toString());
-                params.put("alamat", edtAlamat.getText().toString());
-                params.put("no_hp", edtNoHP.getText().toString());
-                params.put("password", edtPswd.getText().toString());
+//                //menambahkan parameter post, nama put sama dengan nama variable pada webservice PHP
+//                params.put("nama", edtNama.getText().toString());
+//                params.put("jk", jk);
+//                params.put("tgl_lahir", edtTglLhr.getText().toString());
+//                params.put("nik", edtNIK.getText().toString());
+//                params.put("no_rm", edtNoRM.getText().toString());
+//                params.put("no_jaminan", edtNoJaminan.getText().toString());
+//                params.put("alamat", edtAlamat.getText().toString());
+//                params.put("no_hp", edtNoHP.getText().toString());
+//                params.put("password", edtPswd.getText().toString());
 //                <string,string> <string di php, String di atas>
-                Log.d("nama",edtNama.getText().toString());
-                Log.d("jk",jk);
-                Log.d("tgl_lahir",tgl_lahir);
-                Log.d("nik",nik);
-                Log.d("no_rm",edtNoRM.getText().toString());
-                Log.d("no_jaminan",edtNoJaminan.getText().toString());
-                Log.d("alamat",edtAlamat.getText().toString());
-                Log.d("no_hp",edtNoHP.getText().toString());
-                Log.d("password", edtPswd.getText().toString());
+                params.put("nama", nama);
+//                params.put("jk"), jk;
+                params.put("tgl_lahir", tgl_lahir);
+                params.put("nik", nik);
+                params.put("no_rm", noRM);
+                params.put("no_jaminan", noJaminan);
+                params.put("alamat", alamat);
+                params.put("no_hp", noHP);
+                params.put("password", pswd);
+
                 return params;
             }
         };

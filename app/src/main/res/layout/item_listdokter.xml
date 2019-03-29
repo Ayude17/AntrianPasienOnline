@@ -5,7 +5,8 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/tools"
     android:background="#87CEFA"
-    android:paddingBottom="2dp">
+    android:paddingBottom="2dp"
+    app:ignore="NamespaceTypo">
 
     <!--<View-->
         <!--android:id="@+id/dividerTop"-->
@@ -16,7 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/capsule"
-        android:backgroundTint="#fff">
+        android:backgroundTint="@color/colorPlus">
 
         <ImageView
             android:id="@+id/avatar"

@@ -91,7 +91,7 @@ public class DetailKartuAntrianActivity extends AppCompatActivity implements Vie
         String packageName = "com.whatsapp";
         if (isAppInstalled(DetailKartuAntrianActivity.this, packageName)) {
             try {
-                String text = "Halo matur dokter, saya mau bertanya ";// Replace with your message.
+                String text = "Halo Admin, saya mau bertanya ";// Replace with your message.
 
                 String toNumber = "+628155228522"; // Replace with mobile phone number without +Sign or leading zeros.
 

@@ -79,7 +79,7 @@ public class KonfirmasiActivity extends AppCompatActivity implements View.OnClic
         switch (v.getId()) {
             case R.id.btn_batal:
                 Toast.makeText(this, "antrian dibatalkan", Toast.LENGTH_SHORT).show();
-                Intent IntenOut = new Intent(KonfirmasiActivity.this, KartuAntrianActivity.class);
+                Intent IntenOut = new Intent(KonfirmasiActivity.this, MenuActivity.class);
                 startActivity(IntenOut);
 
                 finish();

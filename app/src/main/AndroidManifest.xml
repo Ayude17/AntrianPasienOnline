@@ -15,7 +15,6 @@
         android:theme="@style/AppTheme">
         <activity android:name=".CekHistoriAntrianActivity"></activity>
         <activity android:name=".DetailKartuAntrianActivity" />
-        <activity android:name=".KartuAntrianActivity" />
         <activity android:name=".KonfirmasiActivity" />
         <activity android:name=".PilihDokterActivity" />
         <activity android:name=".PilihPoliActivity" />

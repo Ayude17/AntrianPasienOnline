@@ -35,7 +35,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class PilihPoliActivity extends AppCompatActivity implements View.OnClickListener {
-    private Button btn_kembali2,btn_lanjut2;
+    private Button btn_kembali2;
+//    btn_lanjut2
     RecyclerView list_poliView;
     ArrayList<poli>data;
     ListPoliAdapter adapter;
@@ -47,11 +48,11 @@ public class PilihPoliActivity extends AppCompatActivity implements View.OnClick
         setContentView(R.layout.activity_pilih_poli);
         //mendefinisikan variable
         btn_kembali2 =(Button)findViewById(R.id.btn_kembali2 );
-        btn_lanjut2 =(Button)findViewById(R.id.btn_lanjut2 );
+//        btn_lanjut2 =(Button)findViewById(R.id.btn_lanjut2 );
 
         //mendefinisikan onclick listener
         btn_kembali2.setOnClickListener(this);
-        btn_lanjut2.setOnClickListener(this);
+//        btn_lanjut2.setOnClickListener(this);
 
         //mendefinisikan recycler View
         list_poliView =(RecyclerView) findViewById(R.id.list_poliView );
@@ -135,11 +136,11 @@ public class PilihPoliActivity extends AppCompatActivity implements View.OnClick
                 finish();
                 break;
 
-            case R.id.btn_lanjut2:
-              Intent IntenOut = new Intent(PilihPoliActivity.this, PilihDokterActivity.class);
-               startActivity(IntenOut);
-
-                break;
+//            case R.id.btn_lanjut2:
+////              Intent IntenOut = new Intent(PilihPoliActivity.this, PilihDokterActivity.class);
+////               startActivity(IntenOut);
+////
+////                break;
 
         }
     }

@@ -42,7 +42,7 @@ public class PilihDokterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pilih_dokter);
 
-        btn_next =(Button)findViewById(R.id.btn_next );
+//        btn_next =(Button)findViewById(R.id.btn_next );
         btn_backPoli = (Button) findViewById(R.id.btn_backPoli);
 
         //mendefinisikan recycler View
@@ -53,16 +53,17 @@ public class PilihDokterActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent Intentantrian = new Intent(PilihDokterActivity.this, PilihPoliActivity.class);
                 startActivity(Intentantrian);
+                finish();
             }
         });
 
-        btn_next.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent Intentantrian = new Intent(PilihDokterActivity.this, KartuAntrianActivity.class);
-                startActivity(Intentantrian);
-            }
-        });
+//        btn_next.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent Intentantrian = new Intent(PilihDokterActivity.this, KartuAntrianActivity.class);
+//                startActivity(Intentantrian);
+//            }
+//        });
 
         //mengambil intent dari intent sebelumnya
         Bundle extras = getIntent().getExtras();

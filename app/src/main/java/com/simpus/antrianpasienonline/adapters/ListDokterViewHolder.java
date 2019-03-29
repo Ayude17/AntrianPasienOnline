@@ -5,9 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
 
-import com.simpus.antrianpasienonline.KartuAntrianActivity;
 import com.simpus.antrianpasienonline.KonfirmasiActivity;
-import com.simpus.antrianpasienonline.PilihDokterActivity;
 import com.simpus.antrianpasienonline.R;
 
 public class ListDokterViewHolder extends RecyclerView.ViewHolder {

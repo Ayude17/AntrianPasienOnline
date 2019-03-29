@@ -64,7 +64,7 @@ public class DetailKartuAntrianActivity extends AppCompatActivity implements Vie
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_batal_antri:
-                Toast.makeText(this, "antrian dibatalkan", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Selesai Mendaftar Antrian", Toast.LENGTH_SHORT).show();
                 Intent IntenOut = new Intent(DetailKartuAntrianActivity.this, MenuActivity.class);
                 startActivity(IntenOut);
 

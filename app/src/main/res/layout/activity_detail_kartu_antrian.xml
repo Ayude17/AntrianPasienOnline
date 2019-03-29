@@ -423,10 +423,11 @@
                     android:layout_marginBottom="10dp"
                     android:background="@drawable/capsule"
                     android:backgroundTint="#fff"
-                    android:hint="Batal Antri"
+                    android:hint="Selesai"
                     android:textColorHint="@color/colorPrimary"
                     android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:layout_marginEnd="10dp" />
 
                 <Button
                     android:id="@+id/btn_tanya_admin"

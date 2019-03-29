@@ -30,7 +30,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class PilihDokterActivity extends AppCompatActivity {
-    Button btn_next;
+    Button btn_next, btn_backPoli;
     RecyclerView recyclerDokterView;
     ArrayList<Dokter>data;
     ListDokterAdapter adapter;
@@ -43,9 +43,18 @@ public class PilihDokterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_pilih_dokter);
 
         btn_next =(Button)findViewById(R.id.btn_next );
+        btn_backPoli = (Button) findViewById(R.id.btn_backPoli);
 
         //mendefinisikan recycler View
         recyclerDokterView =(RecyclerView) findViewById(R.id.recyclerDokterView);
+
+        btn_backPoli.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent Intentantrian = new Intent(PilihDokterActivity.this, PilihPoliActivity.class);
+                startActivity(Intentantrian);
+            }
+        });
 
         btn_next.setOnClickListener(new View.OnClickListener() {
             @Override

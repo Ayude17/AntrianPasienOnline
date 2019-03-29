@@ -51,8 +51,8 @@ public class PilihDokterActivity extends AppCompatActivity {
         btn_backPoli.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent Intentantrian = new Intent(PilihDokterActivity.this, PilihPoliActivity.class);
-                startActivity(Intentantrian);
+//                Intent Intentantrian = new Intent(PilihDokterActivity.this, PilihPoliActivity.class);
+//                startActivity(Intentantrian);
                 finish();
             }
         });

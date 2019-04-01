@@ -72,17 +72,17 @@ public class DaftarActivity extends AppCompatActivity implements View.OnClickLis
         edtNoHP = (EditText) findViewById(R.id.ed_noHp);
         edtPswd = (EditText) findViewById(R.id.edt_pswd);
 
-        daftar = getSharedPreferences("daftar", Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = daftar.edit();
-        editor.putString("nama", edtNama.toString());
-        editor.putString("tgl_lahir", edtTglLhr.toString());
-        editor.putString("nik", edtNIK.toString());
-        editor.putString("no_rm", edtNoRM.toString());
-        editor.putString("no_jaminan", edtNoJaminan.toString());
-        editor.putString("alamat", edtAlamat.toString());
-        editor.putString("no_hp", edtNoHP.toString());
-        editor.putString("password", edtPswd.toString());
-        editor.commit();
+//        daftar = getSharedPreferences("daftar", Context.MODE_PRIVATE);
+//        SharedPreferences.Editor editor = daftar.edit();
+//        editor.putString("nama", edtNama.toString());
+//        editor.putString("tgl_lahir", edtTglLhr.toString());
+//        editor.putString("nik", edtNIK.toString());
+//        editor.putString("no_rm", edtNoRM.toString());
+//        editor.putString("no_jaminan", edtNoJaminan.toString());
+//        editor.putString("alamat", edtAlamat.toString());
+//        editor.putString("no_hp", edtNoHP.toString());
+//        editor.putString("password", edtPswd.toString());
+//        editor.commit();
 
         btnDaftar = (Button) findViewById(R.id.btn_daftar);
         btnDaftar.setOnClickListener(this);
@@ -251,6 +251,8 @@ public class DaftarActivity extends AppCompatActivity implements View.OnClickLis
                 params.put("alamat", alamat);
                 params.put("no_hp", noHP);
                 params.put("password", pswd);
+
+                Log.d("usertes", nama);
 
                 return params;
             }

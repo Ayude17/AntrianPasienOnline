@@ -14,12 +14,15 @@ import java.util.ArrayList;
 public class ListDokterAdapter extends RecyclerView.Adapter<ListDokterViewHolder> {
 
     private Context context;
+    private Integer KuotaPas, TerisiPas, SisaPas;
     public static ArrayList<Dokter> data;
 
     public ListDokterAdapter(Context context, ArrayList<Dokter> data){
         super();
         this.context = context;
         this.data = data;
+
+
 
     }
 
@@ -32,9 +35,15 @@ public class ListDokterAdapter extends RecyclerView.Adapter<ListDokterViewHolder
 
     @Override
     public void onBindViewHolder(ListDokterViewHolder holder, int position){
+
+
+        KuotaPas =Integer.valueOf(data.get(position).getKuota());
+        TerisiPas =Integer.valueOf(data.get(position).getTerisi());
+        SisaPas= KuotaPas - TerisiPas;
+
         holder.namaDokterView.setText(data.get(position).getNama());
         holder.poliView.setText(data.get(position).getPoli());
-        holder.kuotaView.setText(data.get(position).getKuota());
+        holder.kuotaView.setText(SisaPas.toString());
     }
 
     @Override

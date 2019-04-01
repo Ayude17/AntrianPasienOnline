@@ -5,6 +5,7 @@ import android.app.ProgressDialog;
 import android.app.TimePickerDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -39,14 +40,19 @@ public class DaftarActivity extends AppCompatActivity implements View.OnClickLis
     RadioButton radLK, radPR;
     private RadioButton radioButton;
     boolean doubleBackToExitPressedOnce = false;
+    SharedPreferences daftar;
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_daftar);
         //        button
-        btnDaftar = (Button) findViewById(R.id.btn_daftar);
-        btnDaftar.setOnClickListener(this);
+
         btnMasuk = (Button) findViewById(R.id.btn_masuk);
         btnMasuk.setOnClickListener(this);
         btnTglLhr = (Button) findViewById(R.id.btn_tglLahir);
@@ -65,6 +71,21 @@ public class DaftarActivity extends AppCompatActivity implements View.OnClickLis
         edtAlamat = (EditText) findViewById(R.id.edt_alamat);
         edtNoHP = (EditText) findViewById(R.id.ed_noHp);
         edtPswd = (EditText) findViewById(R.id.edt_pswd);
+
+        daftar = getSharedPreferences("daftar", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = daftar.edit();
+        editor.putString("nama", edtNama.toString());
+        editor.putString("tgl_lahir", edtTglLhr.toString());
+        editor.putString("nik", edtNIK.toString());
+        editor.putString("no_rm", edtNoRM.toString());
+        editor.putString("no_jaminan", edtNoJaminan.toString());
+        editor.putString("alamat", edtAlamat.toString());
+        editor.putString("no_hp", edtNoHP.toString());
+        editor.putString("password", edtPswd.toString());
+        editor.commit();
+
+        btnDaftar = (Button) findViewById(R.id.btn_daftar);
+        btnDaftar.setOnClickListener(this);
 
 //            btnDaftar.setOnClickListener(new View.OnClickListener() {
 //                @Override
@@ -220,17 +241,7 @@ public class DaftarActivity extends AppCompatActivity implements View.OnClickLis
             @Override
             protected Map<String,String> getParams(){
                 Map<String,String> params = new HashMap<String, String>();
-//                //menambahkan parameter post, nama put sama dengan nama variable pada webservice PHP
-//                params.put("nama", edtNama.getText().toString());
-//                params.put("jk", jk);
-//                params.put("tgl_lahir", edtTglLhr.getText().toString());
-//                params.put("nik", edtNIK.getText().toString());
-//                params.put("no_rm", edtNoRM.getText().toString());
-//                params.put("no_jaminan", edtNoJaminan.getText().toString());
-//                params.put("alamat", edtAlamat.getText().toString());
-//                params.put("no_hp", edtNoHP.getText().toString());
-//                params.put("password", edtPswd.getText().toString());
-//                <string,string> <string di php, String di atas>
+                //menambahkan parameter post, nama put sama dengan nama variable pada webservice PHP
                 params.put("nama", nama);
 //                params.put("jk"), jk;
                 params.put("tgl_lahir", tgl_lahir);

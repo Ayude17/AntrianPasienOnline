@@ -40,7 +40,7 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.dafAntrian:
-                Intent IntentIn = new Intent(MenuActivity.this, PilihTanggalActivity.class);
+                Intent IntentIn = new Intent(MenuActivity.this, DaftarAntriActivity.class);
                 startActivity(IntentIn);
 
                 break;

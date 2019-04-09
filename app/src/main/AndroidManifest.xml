@@ -16,6 +16,7 @@
         <activity android:name=".CekHistoriAntrianActivity"></activity>
         <activity android:name=".DetailKartuAntrianActivity" />
         <activity android:name=".KonfirmasiActivity" />
+        <activity android:name=".DaftarAntriActivity" />
         <activity android:name=".PilihDokterActivity" />
         <activity android:name=".PilihPoliActivity" />
         <activity android:name=".PilihTanggalActivity" />

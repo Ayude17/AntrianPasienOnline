@@ -354,7 +354,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
-                    android:text="(Rata-rata waktu periksa tiap pasien adalah 30 menit)"
+                    android:text="(Rata-rata waktu periksa tiap pasien adalah 10 menit)"
                     android:textColor="#fff" />
                 </LinearLayout>
             </RelativeLayout>

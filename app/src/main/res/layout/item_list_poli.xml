@@ -21,7 +21,7 @@
         android:backgroundTint="@color/colorPlus"
         android:text="@string/app_name"
         android:textColor="@color/colorPrimary"
-        android:textSize="22sp"
+        android:textSize="17sp"
         android:textStyle="bold"
         android:gravity="center"/>
 

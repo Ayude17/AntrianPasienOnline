@@ -114,9 +114,11 @@ public class DaftarActivity extends AppCompatActivity implements View.OnClickLis
 //                     radioButton = (RadioButton) findViewById(selectedId);
 //                     Toast.makeText(DaftarActivity.this,radioButton.getText(),Toast.LENGTH_SHORT).show();
 
-                    nama = edtNama.getText().toString();
+//                    nama = edtNama.getText().toString();
+                    nama = getSharedPreferences("DATA", Context.MODE_PRIVATE).getString("nama","");
                     tgl_lahir = edtTglLhr.getText().toString();
-                    nik = edtNIK.getText().toString();
+//                    nik = edtNIK.getText().toString();
+                    nik = getSharedPreferences("DATA", Context.MODE_PRIVATE).getString("nik","");
                     noRM = edtNoRM.getText().toString();
                     noJaminan = edtNoJaminan.getText().toString();
                     alamat = edtAlamat.getText().toString();

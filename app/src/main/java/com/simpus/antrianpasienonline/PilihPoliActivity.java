@@ -67,7 +67,7 @@ public class PilihPoliActivity extends AppCompatActivity implements View.OnClick
         progressDialog.setMessage("Sedang Mengambil Data...");
         progressDialog.show();
         String url;
-        url = "http://apitest.kinaryatama.id/sms/list_jadwal_poli.php";
+        url = "http://apitest.kinaryatama.id/sms/list_poli.php";
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST,
                 url,new Response.Listener<String>() {
@@ -80,7 +80,7 @@ public class PilihPoliActivity extends AppCompatActivity implements View.OnClick
                     JSONArray arrayResponse = new JSONArray(response);
                     for (int i=0; i<arrayResponse.length();i++){
                         JSONObject object = arrayResponse.getJSONObject(i);
-                        String id_poli =object.getString("id_poli");
+                        String id_poli =object.getString("id");
                         String poli = object.getString("poli");
 
 
